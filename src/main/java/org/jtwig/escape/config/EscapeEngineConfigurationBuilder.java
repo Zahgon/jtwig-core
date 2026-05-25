@@ -5,8 +5,11 @@ import org.jtwig.escape.EscapeEngine;
 import org.jtwig.util.builder.MapBuilder;
 
 public class EscapeEngineConfigurationBuilder<B extends EscapeEngineConfigurationBuilder> implements Builder<EscapeEngineConfiguration> {
+
     private String initialEngine;
+
     private String defaultEngine;
+
     private MapBuilder<B, String, EscapeEngine> escapeEngineMap;
 
     public EscapeEngineConfigurationBuilder(EscapeEngineConfiguration prototype) {
@@ -20,13 +23,11 @@ public class EscapeEngineConfigurationBuilder<B extends EscapeEngineConfiguratio
     }
 
     public B withInitialEngine(String initialEngine) {
-        this.initialEngine = initialEngine;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withDefaultEngine(String defaultEngine) {
-        this.defaultEngine = defaultEngine;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private B self() {
@@ -34,11 +35,11 @@ public class EscapeEngineConfigurationBuilder<B extends EscapeEngineConfiguratio
     }
 
     public MapBuilder<B, String, EscapeEngine> engines() {
-        return escapeEngineMap;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public EscapeEngineConfiguration build() {
-        return new EscapeEngineConfiguration(initialEngine, defaultEngine, escapeEngineMap.build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

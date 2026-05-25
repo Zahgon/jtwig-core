@@ -7,98 +7,58 @@ import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
 
 public class LimitsParser extends BasicParser<LimitProperties> {
+
     boolean whiteSpace = false;
+
     TextNode update = null;
 
     public LimitsParser(ParserContext context) {
         super(LimitsParser.class, context);
     }
 
-    public Rule startComment () {
-        return Sequence(
-                parserContext().syntaxConfiguration().getStartComment(),
-                LimitProperty(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule startComment() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Rule endComment () {
-        return Sequence(
-                LimitProperty(),
-                parserContext().syntaxConfiguration().getEndComment(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule endComment() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Rule startOutput () {
-        return Sequence(
-                parserContext().syntaxConfiguration().getStartOutput(),
-                LimitProperty(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule startOutput() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Rule endOutput () {
-        return Sequence(
-                LimitProperty(),
-                parserContext().syntaxConfiguration().getEndOutput(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule endOutput() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Label("Start Code Island")
-    public Rule startCode () {
-        return Sequence(
-                parserContext().syntaxConfiguration().getStartCode(),
-                LimitProperty(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule startCode() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Label("End Code Island")
-    public Rule endCode () {
-        return Sequence(
-                LimitProperty(),
-                parserContext().syntaxConfiguration().getEndCode(),
-                markWhiteSpace(pop().isWhiteSpaceControl())
-        );
+    public Rule endCode() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Rule LimitProperty() {
-        return FirstOf(
-                Sequence(
-                        String("-"),
-                        push(new LimitProperties(true))
-                ),
-                push(new LimitProperties(false))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     boolean markWhiteSpace(boolean whiteSpace) {
-        if (!getContext().inPredicate()) {
-            if (update != null) {
-                update.trimRight(whiteSpace);
-                update = null;
-            }
-            this.whiteSpace = whiteSpace;
-        }
-        return true;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Rule anyEnd() {
-        return FirstOf(
-                parserContext().syntaxConfiguration().getStartComment(),
-                parserContext().syntaxConfiguration().getStartCode(),
-                parserContext().syntaxConfiguration().getStartOutput()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean lastWhiteSpace() {
-        return whiteSpace;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean update(TextNode update) {
-        this.update = update;
-        return true;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

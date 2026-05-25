@@ -14,17 +14,24 @@ import org.jtwig.render.listeners.StagedRenderListener;
 import org.jtwig.render.node.renderer.NodeRender;
 import org.jtwig.util.builder.ListBuilder;
 import org.jtwig.util.builder.MapBuilder;
-
 import java.nio.charset.Charset;
 
 public class RenderConfigurationBuilder<B extends RenderConfigurationBuilder> implements Builder<RenderConfiguration> {
+
     private boolean strictMode;
+
     private Charset outputCharset;
+
     private final MapBuilder<B, Class<? extends Node>, NodeRender> nodeRenders;
+
     private final MapBuilder<B, Class<? extends Expression>, ExpressionCalculator> expressionCalculators;
+
     private final MapBuilder<B, Class<? extends BinaryOperator>, BinaryOperationCalculator> binaryExpressionCalculators;
+
     private final MapBuilder<B, Class<? extends UnaryOperator>, UnaryOperationCalculator> unaryExpressionCalculators;
+
     private final MapBuilder<B, Class<? extends TestExpression>, TestExpressionCalculator> testExpressionCalculators;
+
     private final ListBuilder<B, StagedRenderListener> renderListeners;
 
     public RenderConfigurationBuilder() {
@@ -35,6 +42,7 @@ public class RenderConfigurationBuilder<B extends RenderConfigurationBuilder> im
         this.testExpressionCalculators = new MapBuilder<>(self());
         this.renderListeners = new ListBuilder<B, StagedRenderListener>(self());
     }
+
     public RenderConfigurationBuilder(RenderConfiguration prototype) {
         this.strictMode = prototype.getStrictMode();
         this.outputCharset = prototype.getDefaultOutputCharset();
@@ -47,50 +55,43 @@ public class RenderConfigurationBuilder<B extends RenderConfigurationBuilder> im
     }
 
     public B withStrictMode(boolean strictMode) {
-        this.strictMode = strictMode;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withOutputCharset(Charset outputCharset) {
-        this.outputCharset = outputCharset;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public MapBuilder<B, Class<? extends Node>, NodeRender> nodeRenders () {
-        return nodeRenders;
+    public MapBuilder<B, Class<? extends Node>, NodeRender> nodeRenders() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MapBuilder<B, Class<? extends Expression>, ExpressionCalculator> expressionCalculators() {
-        return expressionCalculators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MapBuilder<B, Class<? extends BinaryOperator>, BinaryOperationCalculator> binaryExpressionCalculators() {
-        return binaryExpressionCalculators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MapBuilder<B, Class<? extends UnaryOperator>, UnaryOperationCalculator> unaryExpressionCalculators() {
-        return unaryExpressionCalculators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MapBuilder<B, Class<? extends TestExpression>, TestExpressionCalculator> testExpressionCalculators() {
-        return testExpressionCalculators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, StagedRenderListener> renderListeners() {
-        return renderListeners;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    protected B self () {
-        return (B) this;
+    protected B self() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public RenderConfiguration build() {
-        return new RenderConfiguration(strictMode, outputCharset,
-                nodeRenders.build(),
-                expressionCalculators.build(),
-                binaryExpressionCalculators.build(),
-                unaryExpressionCalculators.build(),
-                testExpressionCalculators.build(), renderListeners.build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -10,6 +10,7 @@ import org.jtwig.renderable.Renderable;
 import org.jtwig.util.ErrorMessageFormatter;
 
 public class RenderNodeService {
+
     private final NodeRenderSelector nodeRenderSelector;
 
     public RenderNodeService(NodeRenderSelector nodeRenderSelector) {
@@ -17,20 +18,6 @@ public class RenderNodeService {
     }
 
     public Renderable render(RenderRequest request, Node node) {
-        Optional<NodeRender> nodeRenderOptional = nodeRenderSelector.renderFor(node);
-        if (nodeRenderOptional.isPresent()) {
-            request.getRenderContext().start(EscapeEngine.class, request.getRenderContext().getCurrent(EscapeEngine.class));
-            request.getRenderContext().start(Node.class, node);
-
-            request.getEnvironment().getRenderEnvironment().getRenderListeners().trigger(RenderStage.PRE_NODE_RENDER, request);
-            Renderable renderable = nodeRenderOptional.get().render(request, node);
-            request.getEnvironment().getRenderEnvironment().getRenderListeners().trigger(RenderStage.POST_NODE_RENDER, request);
-
-            request.getRenderContext().end(EscapeEngine.class);
-            request.getRenderContext().end(Node.class);
-            return renderable;
-        } else {
-            throw new IllegalArgumentException(ErrorMessageFormatter.errorMessage(node.getPosition(), String.format("No render found for %s", node.getClass())));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

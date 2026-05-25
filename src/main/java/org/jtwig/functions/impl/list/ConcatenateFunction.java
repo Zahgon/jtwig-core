@@ -2,28 +2,23 @@ package org.jtwig.functions.impl.list;
 
 import org.jtwig.functions.FunctionRequest;
 import org.jtwig.functions.JtwigFunction;
-
 import java.util.Collection;
 import java.util.Collections;
 
 public class ConcatenateFunction implements JtwigFunction {
+
     @Override
     public String name() {
-        return "concat";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Collection<String> aliases() {
-        return Collections.singleton("concatenate");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1);
-        StringBuilder builder = new StringBuilder();
-        for (Object piece : request.getRemainingArguments(0)) {
-            builder.append(request.getEnvironment().getValueEnvironment().getStringConverter().convert(piece));
-        }
-        return builder.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

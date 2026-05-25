@@ -6,28 +6,17 @@ import org.jtwig.parser.parboiled.base.SpacingParser;
 import org.parboiled.Rule;
 
 public class PrimaryExpressionParser extends ExpressionParser<Expression> {
+
     public PrimaryExpressionParser(ParserContext context) {
         super(PrimaryExpressionParser.class, context);
     }
 
     @Override
     public Rule ExpressionRule() {
-        return FirstOf(
-                parserContext().parser(UnaryOperationExpressionParser.class).ExpressionRule(),
-                ParenthesisRule(),
-                parserContext().parser(ConstantExpressionParser.class).ExpressionRule(),
-                parserContext().parser(FunctionExpressionParser.class).ExpressionRule(),
-                parserContext().parser(VariableExpressionParser.class).ExpressionRule()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Rule ParenthesisRule() {
-        return Sequence(
-                "(",
-                parserContext().parser(SpacingParser.class).Spacing(),
-                parserContext().parser(AnyExpressionParser.class).ExpressionRule(),
-                parserContext().parser(SpacingParser.class).Spacing(),
-                ")"
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

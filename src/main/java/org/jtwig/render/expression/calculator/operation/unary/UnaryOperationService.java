@@ -8,18 +8,14 @@ import org.jtwig.render.expression.calculator.operation.unary.calculators.UnaryO
 import org.jtwig.util.ErrorMessageFormatter;
 
 public class UnaryOperationService {
+
     private final UnaryOperationCalculatorSelector unaryOperationCalculatorSelector;
 
     public UnaryOperationService(UnaryOperationCalculatorSelector unaryOperationCalculatorSelector) {
         this.unaryOperationCalculatorSelector = unaryOperationCalculatorSelector;
     }
 
-    public Object calculate (RenderRequest request, UnaryOperationExpression expression) {
-        Optional<UnaryOperationCalculator> optional = unaryOperationCalculatorSelector.calculatorFor(expression.getOperator());
-        if (optional.isPresent()) {
-            return optional.get().calculate(request, expression.getPosition(), expression.getOperand());
-        } else {
-            throw new CalculationException(ErrorMessageFormatter.errorMessage(expression.getPosition(), String.format("No calculator for operator %s found", expression.getOperator().getClass())));
-        }
+    public Object calculate(RenderRequest request, UnaryOperationExpression expression) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -2,12 +2,14 @@ package org.jtwig.resource.environment;
 
 import org.jtwig.resource.ResourceService;
 import org.jtwig.resource.reference.ResourceReferenceExtractor;
-
 import java.nio.charset.Charset;
 
 public class ResourceEnvironment {
+
     private final Charset defaultInputCharset;
+
     private final ResourceService resourceService;
+
     private final ResourceReferenceExtractor resourceReferenceExtractor;
 
     public ResourceEnvironment(Charset defaultInputCharset, ResourceService resourceService, ResourceReferenceExtractor extractor) {
@@ -17,14 +19,14 @@ public class ResourceEnvironment {
     }
 
     public Charset getDefaultInputCharset() {
-        return defaultInputCharset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ResourceService getResourceService() {
-        return resourceService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ResourceReferenceExtractor getResourceReferenceExtractor() {
-        return resourceReferenceExtractor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

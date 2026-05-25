@@ -5,18 +5,21 @@ import org.jtwig.model.position.Position;
 import org.jtwig.util.ErrorMessageFormatter;
 
 public interface Converter<T> {
+
     Result<T> convert(Object object);
 
     class Result<T> {
-        public static <T> Result<T> undefined () {
-            return new Result<>(null, false);
+
+        public static <T> Result<T> undefined() {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        public static <T> Result<T> defined (T value) {
-            return new Result<>(value, true);
+        public static <T> Result<T> defined(T value) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         private final T value;
+
         private final boolean defined;
 
         public Result(T value, boolean defined) {
@@ -25,21 +28,19 @@ public interface Converter<T> {
         }
 
         public T get() {
-            return value;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public boolean isDefined() {
-            return defined;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public T or(T otherwise) {
-            if (defined) return value;
-            else return otherwise;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public T orThrow(Position position, String message) {
-            if (defined) return value;
-            throw new CalculationException(ErrorMessageFormatter.errorMessage(position, message));
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

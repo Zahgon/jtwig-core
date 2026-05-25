@@ -5,6 +5,7 @@ import org.jtwig.render.config.RenderConfiguration;
 import org.jtwig.render.config.RenderConfigurationBuilder;
 
 public class AndRenderConfigurationBuilder extends RenderConfigurationBuilder<AndRenderConfigurationBuilder> implements AndBuilder<EnvironmentConfigurationBuilder> {
+
     private final EnvironmentConfigurationBuilder parent;
 
     public AndRenderConfigurationBuilder(EnvironmentConfigurationBuilder parent) {
@@ -17,7 +18,7 @@ public class AndRenderConfigurationBuilder extends RenderConfigurationBuilder<An
     }
 
     @Override
-    public EnvironmentConfigurationBuilder and () {
-        return parent;
+    public EnvironmentConfigurationBuilder and() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

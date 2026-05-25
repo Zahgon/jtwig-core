@@ -5,8 +5,9 @@ import java.util.Map;
 import java.util.Stack;
 
 public class RenderContext {
-    public static RenderContext create () {
-        return new RenderContext(new HashMap<Class, Stack<Context<?>>>());
+
+    public static RenderContext create() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final Map<Class, Stack<Context<?>>> contexts;
@@ -15,45 +16,34 @@ public class RenderContext {
         this.contexts = contexts;
     }
 
-    public <T> RenderContext start (Class<T> type, T context) {
-        if (!contexts.containsKey(type)) {
-            contexts.put(type, new Stack<Context<?>>());
-        }
-
-        contexts.get(type).push(Context.create(context));
-        return this;
+    public <T> RenderContext start(Class<T> type, T context) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public <T> T end (Class<T> type) {
-        if (!contexts.containsKey(type)) {
-            throw new IllegalStateException(String.format("There is no context for %s", type));
-        }
-
-        Context<?> context = contexts.get(type).pop();
-        context.end();
-        return type.cast(context.getItem());
+    public <T> T end(Class<T> type) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    private <T> Context<T> getCurrentContext (Class<T> type) {
+    private <T> Context<T> getCurrentContext(Class<T> type) {
         if (!contexts.containsKey(type)) {
             throw new IllegalStateException(String.format("There is no context for %s", type));
         }
         return (Context<T>) contexts.get(type).peek();
     }
 
-    public <T> T getCurrent (Class<T> type) {
-        return getCurrentContext(type).getItem();
+    public <T> T getCurrent(Class<T> type) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public boolean hasCurrent (Class type) {
-        return contexts.containsKey(type) && !contexts.get(type).isEmpty();
+    public boolean hasCurrent(Class type) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public void onEndCurrent (Class type, Runnable runnable) {
-        getCurrentContext(type).onEnd(runnable);
+    public void onEndCurrent(Class type, Runnable runnable) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public <T> void set(Class<T> type, T item) {
-        getCurrentContext(type).set(item);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

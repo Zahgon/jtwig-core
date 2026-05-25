@@ -12,6 +12,7 @@ import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
 
 public class ImportSelfNodeParser extends NodeParser<ImportSelfNode> {
+
     private static final String SELF = "_self";
 
     public ImportSelfNodeParser(ParserContext context) {
@@ -21,29 +22,6 @@ public class ImportSelfNodeParser extends NodeParser<ImportSelfNode> {
     @Override
     @Label("Import Self Node")
     public Rule NodeRule() {
-        LimitsParser limitsParser = parserContext().parser(LimitsParser.class);
-        SpacingParser spacingParser = parserContext().parser(SpacingParser.class);
-        LexicParser lexicParser = parserContext().parser(LexicParser.class);
-        VariableExpressionParser variableExpressionParser = parserContext().parser(VariableExpressionParser.class);
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                limitsParser.startCode(),
-                spacingParser.Spacing(),
-                lexicParser.Keyword(Keyword.IMPORT),
-                spacingParser.Spacing(),
-                lexicParser.Keyword(SELF),
-                spacingParser.Spacing(),
-                Mandatory(String("as"), "Wrong syntax expecting token 'as'"),
-                spacingParser.Spacing(),
-                Mandatory(variableExpressionParser.ExpressionRule(), "Missing alias declaration"),
-                spacingParser.Spacing(),
-                Mandatory(limitsParser.endCode(), "Code island not closed"),
-
-                push(new ImportSelfNode(
-                        positionTrackerParser.pop(1),
-                        variableExpressionParser.pop()
-                ))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

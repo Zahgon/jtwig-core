@@ -8,7 +8,6 @@ public class GreaterOperationCalculator implements SimpleBinaryOperationCalculat
 
     @Override
     public Object calculate(RenderRequest request, Position position, Object left, Object right) {
-        ValueComparator valueComparator = request.getEnvironment().getValueEnvironment().getValueComparator();
-        return valueComparator.compare(request, left, right) > 0;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

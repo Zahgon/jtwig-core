@@ -8,25 +8,14 @@ import org.jtwig.render.context.model.BlockDefinition;
 import org.jtwig.render.context.model.BlockReference;
 
 public class BlockFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "block";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1);
-        request.maximumNumberOfArguments(1);
-        String name = request.getEnvironment().getValueEnvironment().getStringConverter().convert(request.get(0));
-
-        Optional<BlockDefinition> blockDefinitionOptional = request.getRenderContext().getCurrent(BlockContext.class).get(name);
-        if(!blockDefinitionOptional.isPresent()) {
-            return "";
-        }
-
-        request.getRenderContext().start(BlockReference.class, new BlockReference(name));
-        Object renderable = NodeRenderHelper.renderBlock(request, blockDefinitionOptional.get());
-        request.getRenderContext().end(BlockReference.class);
-        return renderable;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

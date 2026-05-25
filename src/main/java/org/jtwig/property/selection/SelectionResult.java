@@ -5,7 +5,9 @@ import org.jtwig.property.resolver.PropertyResolver;
 import org.jtwig.reflection.model.Value;
 
 public class SelectionResult {
+
     private final Optional<PropertyResolver> propertyResolver;
+
     private final Optional<Value> resolvedValue;
 
     public SelectionResult(Optional<PropertyResolver> propertyResolver, Optional<Value> resolvedValue) {
@@ -14,10 +16,10 @@ public class SelectionResult {
     }
 
     public Optional<PropertyResolver> getPropertyResolver() {
-        return propertyResolver;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<Value> getResolvedValue() {
-        return resolvedValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

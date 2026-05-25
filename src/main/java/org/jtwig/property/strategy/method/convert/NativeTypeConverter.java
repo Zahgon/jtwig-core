@@ -6,7 +6,9 @@ import org.jtwig.property.strategy.method.argument.IsNativeType;
 import org.jtwig.reflection.model.Value;
 
 public class NativeTypeConverter implements Converter {
+
     private final IsNativeType isNativeType;
+
     private final AssignableTypes assignableTypes;
 
     public NativeTypeConverter(IsNativeType isNativeType, AssignableTypes assignableTypes) {
@@ -16,18 +18,6 @@ public class NativeTypeConverter implements Converter {
 
     @Override
     public Optional<Value> convert(Object value, Class type) {
-        if ((value != null)) {
-            if (assignableTypes.isAssignable(type, value.getClass())) {
-                return Optional.of(new Value(value));
-            } else {
-                return Optional.absent();
-            }
-        } else {
-            if (isNativeType.isNative(type)) {
-                return Optional.absent();
-            } else {
-                return Optional.of(new Value(null));
-            }
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

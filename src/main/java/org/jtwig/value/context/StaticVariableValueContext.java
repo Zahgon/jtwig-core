@@ -1,8 +1,11 @@
 package org.jtwig.value.context;
 
 public class StaticVariableValueContext implements ValueContext {
+
     private final ValueContext parent;
+
     private final String staticKey;
+
     private final Object staticValue;
 
     public StaticVariableValueContext(ValueContext parent, String staticKey, Object staticValue) {
@@ -13,16 +16,11 @@ public class StaticVariableValueContext implements ValueContext {
 
     @Override
     public Object resolve(String key) {
-        if (staticKey.equals(key)) {
-            return staticValue;
-        } else {
-            return parent.resolve(key);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public ValueContext with(String key, Object value) {
-        parent.with(key, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

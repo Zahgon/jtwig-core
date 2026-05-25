@@ -6,18 +6,24 @@ import org.jtwig.parser.cache.TemplateCache;
 import org.jtwig.parser.parboiled.expression.test.TestExpressionParser;
 import org.jtwig.render.expression.calculator.operation.binary.BinaryOperator;
 import org.jtwig.render.expression.calculator.operation.unary.UnaryOperator;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 public class JtwigParserConfiguration {
+
     private final SyntaxConfiguration syntaxConfiguration;
+
     private final List<AddonParserProvider> addonParserProviders;
+
     private final Collection<UnaryOperator> unaryOperators;
+
     private final Collection<BinaryOperator> binaryOperators;
+
     private final List<Class<? extends TestExpressionParser>> testExpressionParsers;
+
     private final Optional<TemplateCache> templateCache;
+
     private final Map<String, Object> properties;
 
     public JtwigParserConfiguration(SyntaxConfiguration syntaxConfiguration, List<AddonParserProvider> addonParserProviders, Collection<UnaryOperator> unaryOperators, Collection<BinaryOperator> binaryOperators, List<Class<? extends TestExpressionParser>> testExpressionParsers, Optional<TemplateCache> templateCache, Map<String, Object> properties) {
@@ -31,30 +37,30 @@ public class JtwigParserConfiguration {
     }
 
     public SyntaxConfiguration getSyntaxConfiguration() {
-        return syntaxConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<AddonParserProvider> getAddonParserProviders() {
-        return addonParserProviders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<TemplateCache> getTemplateCache() {
-        return templateCache;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<UnaryOperator> getUnaryOperators() {
-        return unaryOperators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<BinaryOperator> getBinaryOperators() {
-        return binaryOperators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Class<? extends TestExpressionParser>> getTestExpressionParsers() {
-        return testExpressionParsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, Object> getProperties() {
-        return properties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

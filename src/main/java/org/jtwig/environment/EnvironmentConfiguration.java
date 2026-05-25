@@ -10,23 +10,33 @@ import org.jtwig.render.config.RenderConfiguration;
 import org.jtwig.render.expression.calculator.enumerated.EnumerationListStrategy;
 import org.jtwig.resource.config.ResourceConfiguration;
 import org.jtwig.value.config.ValueConfiguration;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class EnvironmentConfiguration {
+
     private final ResourceConfiguration resourceConfiguration;
+
     private final JtwigParserConfiguration jtwigParserConfiguration;
+
     private final RenderConfiguration renderConfiguration;
+
     private final ValueConfiguration valueConfiguration;
+
     private final EscapeEngineConfiguration escapeConfiguration;
+
     private final PropertyResolverConfiguration propertyResolverConfiguration;
+
     private final Collection<EnumerationListStrategy> enumerationStrategies;
+
     private final Collection<JtwigFunction> functions;
+
     private final Map<String, Object> parameters = new HashMap<>();
+
     private final Collection<Extension> extensions;
+
     private final List<EnvironmentInitializer> initializers;
 
     public EnvironmentConfiguration(ResourceConfiguration resourceConfiguration, Collection<EnumerationListStrategy> enumerationStrategies, JtwigParserConfiguration jtwigParserConfiguration, ValueConfiguration valueConfiguration, RenderConfiguration renderConfiguration, EscapeEngineConfiguration escapeConfiguration, PropertyResolverConfiguration propertyResolverConfiguration, Collection<JtwigFunction> functions, Map<String, Object> parameters, Collection<Extension> extensions, List<EnvironmentInitializer> initializers) {
@@ -44,46 +54,46 @@ public class EnvironmentConfiguration {
     }
 
     public ResourceConfiguration getResourceConfiguration() {
-        return resourceConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Map<String, Object> getParameters() {
-        return parameters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<JtwigFunction> getFunctions() {
-        return functions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public PropertyResolverConfiguration getPropertyResolverConfiguration() {
-        return propertyResolverConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<EnumerationListStrategy> getEnumerationStrategies() {
-        return enumerationStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ValueConfiguration getValueConfiguration() {
-        return valueConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public JtwigParserConfiguration getJtwigParserConfiguration() {
-        return jtwigParserConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RenderConfiguration getRenderConfiguration() {
-        return renderConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Extension> getExtensions() {
-        return extensions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EscapeEngineConfiguration getEscapeConfiguration() {
-        return escapeConfiguration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<EnvironmentInitializer> getInitializers() {
-        return initializers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -1,10 +1,10 @@
 package org.jtwig.model.expression;
 
 import org.jtwig.model.position.Position;
-
 import java.util.Collections;
 
 public class VariableExpression extends InjectableExpression {
+
     private final String identifier;
 
     public VariableExpression(Position position, String identifier) {
@@ -13,11 +13,11 @@ public class VariableExpression extends InjectableExpression {
     }
 
     public String getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Expression inject(Expression expression) {
-        return new FunctionExpression(getPosition(), identifier, Collections.singletonList(expression));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -5,7 +5,9 @@ import java.io.OutputStream;
 import java.nio.charset.Charset;
 
 public class StreamRenderResult implements RenderResult {
+
     private final OutputStream outputStream;
+
     private final Charset charset;
 
     public StreamRenderResult(OutputStream outputStream, Charset charset) {
@@ -15,26 +17,16 @@ public class StreamRenderResult implements RenderResult {
 
     @Override
     public RenderResult append(String content) {
-        try {
-            outputStream.write(content.getBytes(charset));
-        } catch (IOException e) {
-            throw new RenderException(e);
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public RenderResult flush() {
-        try {
-            outputStream.flush();
-        } catch (IOException e) {
-            throw new RenderException(e);
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String content() {
-        throw new UnsupportedOperationException("Cannot gather content from output stream");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

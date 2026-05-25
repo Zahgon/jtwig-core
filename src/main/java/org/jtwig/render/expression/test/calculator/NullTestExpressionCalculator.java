@@ -8,15 +8,9 @@ import org.jtwig.render.expression.CalculateExpressionService;
 import org.jtwig.value.Undefined;
 
 public class NullTestExpressionCalculator implements TestExpressionCalculator<NullTestExpression> {
+
     @Override
     public Object calculate(RenderRequest request, Position position, NullTestExpression test, Expression argument) {
-        CalculateExpressionService calculateExpressionService = request.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-        Object argumentValue = calculateExpressionService.calculate(request, argument);
-
-        if (request.getEnvironment().getRenderEnvironment().getStrictMode()) {
-            return argumentValue == null;
-        } else {
-            return argumentValue == null || argumentValue == Undefined.UNDEFINED;
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

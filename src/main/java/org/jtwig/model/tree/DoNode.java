@@ -4,6 +4,7 @@ import org.jtwig.model.expression.Expression;
 import org.jtwig.model.position.Position;
 
 public class DoNode extends Node {
+
     private final Expression expression;
 
     public DoNode(Position position, Expression expression) {
@@ -12,6 +13,6 @@ public class DoNode extends Node {
     }
 
     public Expression getExpression() {
-        return expression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

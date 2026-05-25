@@ -4,24 +4,20 @@ import org.jtwig.functions.FunctionRequest;
 import org.jtwig.functions.SimpleJtwigFunction;
 import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.convert.Converter;
-
 import java.math.BigDecimal;
 
 public class EmptyFunction extends SimpleJtwigFunction {
+
     private final DefinedFunction definedFunction = new DefinedFunction();
 
     @Override
     public String name() {
-        return "empty";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        return request.get(0) == null ||
-                !definedFunction.execute(request) ||
-                isEmptyIterable(request) ||
-                isZero(request)
-                ;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private boolean isZero(FunctionRequest request) {

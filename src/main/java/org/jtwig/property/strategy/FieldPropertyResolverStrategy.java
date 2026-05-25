@@ -10,7 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FieldPropertyResolverStrategy implements PropertyResolverStrategy {
+
     private static final Logger logger = LoggerFactory.getLogger(FieldPropertyResolverStrategy.class);
+
     private final JavaClassManager javaClassManager;
 
     public FieldPropertyResolverStrategy(JavaClassManager javaClassManager) {
@@ -19,15 +21,6 @@ public class FieldPropertyResolverStrategy implements PropertyResolverStrategy {
 
     @Override
     public Optional<PropertyResolver> select(Request request) {
-        if (request.getRightExpression() instanceof VariableExpression) {
-            String fieldName = ((VariableExpression) request.getRightExpression()).getIdentifier();
-            Optional<JavaField> field = javaClassManager.metadata(request.getLeftValue().getClass()).field(fieldName);
-            if (field.isPresent()) {
-                PropertyResolver propertyResolver = new FieldPropertyResolver(field.get());
-                return Optional.of(propertyResolver);
-            }
-        }
-
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

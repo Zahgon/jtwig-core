@@ -3,8 +3,11 @@ package org.jtwig.model.expression;
 import org.jtwig.model.position.Position;
 
 public class TernaryOperationExpression extends Expression {
+
     private final Expression firstExpression;
+
     private final Expression secondExpression;
+
     private final Expression thirdExpression;
 
     public TernaryOperationExpression(Position position, Expression firstExpression, Expression secondExpression, Expression thirdExpression) {
@@ -15,14 +18,14 @@ public class TernaryOperationExpression extends Expression {
     }
 
     public Expression getFirstExpression() {
-        return firstExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getSecondExpression() {
-        return secondExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getThirdExpression() {
-        return thirdExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,10 +7,9 @@ import org.jtwig.render.RenderRequest;
 import org.jtwig.render.expression.CalculateExpressionService;
 
 public class FunctionTestExpressionCalculator implements TestExpressionCalculator<FunctionTestExpression> {
+
     @Override
     public Object calculate(RenderRequest request, Position position, FunctionTestExpression test, Expression argument) {
-        CalculateExpressionService calculateExpressionService = request.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-        Expression expression = test.getInjectableExpression().inject(argument);
-        return calculateExpressionService.calculate(request, expression);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -1,11 +1,17 @@
 package org.jtwig.parser.config;
 
 public class SyntaxConfiguration {
+
     private final String startComment;
+
     private final String endComment;
+
     private final String startOutput;
+
     private final String endOutput;
+
     private final String startCode;
+
     private final String endCode;
 
     public SyntaxConfiguration(String startComment, String endComment, String startOutput, String endOutput, String startCode, String endCode) {
@@ -18,26 +24,26 @@ public class SyntaxConfiguration {
     }
 
     public String getEndCode() {
-        return endCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStartComment() {
-        return startComment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getEndComment() {
-        return endComment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStartOutput() {
-        return startOutput;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getEndOutput() {
-        return endOutput;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getStartCode() {
-        return startCode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -5,14 +5,18 @@ import org.jtwig.resource.loader.TypedResourceLoader;
 import org.jtwig.resource.reference.ResourceReferenceExtractor;
 import org.jtwig.resource.resolver.RelativeResourceResolver;
 import org.jtwig.util.builder.ListBuilder;
-
 import java.nio.charset.Charset;
 
 public class ResourceConfigurationBuilder<B extends ResourceConfigurationBuilder> implements Builder<ResourceConfiguration> {
+
     private final ListBuilder<B, RelativeResourceResolver> resourceResolvers;
+
     private final ListBuilder<B, TypedResourceLoader> resourceLoaders;
+
     private final ListBuilder<B, String> absoluteResourceTypes;
+
     private ResourceReferenceExtractor resourceReferenceExtractor;
+
     private Charset defaultInputCharset;
 
     public ResourceConfigurationBuilder() {
@@ -30,25 +34,23 @@ public class ResourceConfigurationBuilder<B extends ResourceConfigurationBuilder
     }
 
     public B withDefaultInputCharset(Charset defaultInputCharset) {
-        this.defaultInputCharset = defaultInputCharset;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withResourceReferenceExtractor(ResourceReferenceExtractor extractor) {
-        this.resourceReferenceExtractor = extractor;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, RelativeResourceResolver> relativeResourceResolvers() {
-        return resourceResolvers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public ListBuilder<B, TypedResourceLoader> resourceLoaders () {
-        return resourceLoaders;
+    public ListBuilder<B, TypedResourceLoader> resourceLoaders() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, String> absoluteResourceTypes() {
-        return absoluteResourceTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private B self() {
@@ -57,10 +59,6 @@ public class ResourceConfigurationBuilder<B extends ResourceConfigurationBuilder
 
     @Override
     public ResourceConfiguration build() {
-        return new ResourceConfiguration(resourceResolvers.build(),
-                absoluteResourceTypes.build(),
-                resourceLoaders.build(),
-                resourceReferenceExtractor,
-                defaultInputCharset);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

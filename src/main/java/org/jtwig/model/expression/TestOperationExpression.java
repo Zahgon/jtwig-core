@@ -4,7 +4,9 @@ import org.jtwig.model.expression.test.TestExpression;
 import org.jtwig.model.position.Position;
 
 public class TestOperationExpression extends Expression {
+
     private final Expression argument;
+
     private final TestExpression testExpression;
 
     public TestOperationExpression(Position position, Expression argument, TestExpression testExpression) {
@@ -14,10 +16,10 @@ public class TestOperationExpression extends Expression {
     }
 
     public Expression getArgument() {
-        return argument;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TestExpression getTestExpression() {
-        return testExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

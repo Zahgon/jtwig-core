@@ -5,10 +5,12 @@ import org.jtwig.model.expression.Expression;
 import org.jtwig.model.expression.VariableExpression;
 import org.jtwig.model.position.Position;
 
-
 public class ForLoopNode extends ContentNode {
+
     private final Optional<VariableExpression> keyVariableExpression;
+
     private final VariableExpression variableExpression;
+
     private final Expression expression;
 
     public ForLoopNode(Position position, VariableExpression keyVariableExpression, VariableExpression variableExpression, Expression expression, Node content) {
@@ -24,15 +26,14 @@ public class ForLoopNode extends ContentNode {
     }
 
     public VariableExpression getVariableExpression() {
-        return variableExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getExpression() {
-        return expression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<VariableExpression> getKeyVariableExpression() {
-        return keyVariableExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

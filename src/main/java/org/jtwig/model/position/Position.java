@@ -3,8 +3,11 @@ package org.jtwig.model.position;
 import org.jtwig.resource.reference.ResourceReference;
 
 public class Position {
+
     private final ResourceReference resource;
+
     private final int line;
+
     private final int column;
 
     public Position(ResourceReference resource, int line, int column) {
@@ -14,15 +17,15 @@ public class Position {
     }
 
     public int getLine() {
-        return line;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int getColumn() {
-        return column;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        return String.format("%s (Line: %d, Column: %d)", resource, line, column);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

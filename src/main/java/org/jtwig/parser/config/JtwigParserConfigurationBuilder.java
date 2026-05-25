@@ -11,24 +11,32 @@ import org.jtwig.util.builder.ListBuilder;
 import org.jtwig.util.builder.MapBuilder;
 
 public class JtwigParserConfigurationBuilder<B extends JtwigParserConfigurationBuilder> implements Builder<JtwigParserConfiguration> {
+
     private AndSyntaxConfigurationBuilder<B> syntaxConfiguration;
+
     private final ListBuilder<B, AddonParserProvider> addonParserProviders;
+
     private final ListBuilder<B, UnaryOperator> unaryOperators;
+
     private final ListBuilder<B, BinaryOperator> binaryOperators;
+
     private final ListBuilder<B, Class<? extends TestExpressionParser>> testExpressionParsers;
+
     private Optional<TemplateCache> templateCache;
+
     private final MapBuilder<B, String, Object> properties;
 
-    public JtwigParserConfigurationBuilder () {
-        this.syntaxConfiguration  = new AndSyntaxConfigurationBuilder<>(self());
+    public JtwigParserConfigurationBuilder() {
+        this.syntaxConfiguration = new AndSyntaxConfigurationBuilder<>(self());
         this.addonParserProviders = new ListBuilder<>(self());
         this.unaryOperators = new ListBuilder<>(self());
         this.binaryOperators = new ListBuilder<>(self());
         this.testExpressionParsers = new ListBuilder<>(self());
         this.properties = new MapBuilder<>(self());
     }
-    public JtwigParserConfigurationBuilder (JtwigParserConfiguration prototype) {
-        this.syntaxConfiguration  = new AndSyntaxConfigurationBuilder<>(self(), prototype.getSyntaxConfiguration());
+
+    public JtwigParserConfigurationBuilder(JtwigParserConfiguration prototype) {
+        this.syntaxConfiguration = new AndSyntaxConfigurationBuilder<>(self(), prototype.getSyntaxConfiguration());
         this.addonParserProviders = new ListBuilder<>(self(), prototype.getAddonParserProviders());
         this.unaryOperators = new ListBuilder<>(self(), prototype.getUnaryOperators());
         this.binaryOperators = new ListBuilder<>(self(), prototype.getBinaryOperators());
@@ -37,47 +45,44 @@ public class JtwigParserConfigurationBuilder<B extends JtwigParserConfigurationB
         this.properties = new MapBuilder<>(self(), prototype.getProperties());
     }
 
-    public AndSyntaxConfigurationBuilder<B> syntax () {
-        return syntaxConfiguration;
+    public AndSyntaxConfigurationBuilder<B> syntax() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
-
 
     public B withTemplateCache(TemplateCache templateCache) {
-        this.templateCache = Optional.fromNullable(templateCache);
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
+
     public B withoutTemplateCache() {
-        this.templateCache = Optional.absent();
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, AddonParserProvider> addonParserProviders() {
-        return addonParserProviders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, UnaryOperator> unaryOperators() {
-        return unaryOperators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, BinaryOperator> binaryOperators() {
-        return binaryOperators;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, Class<? extends TestExpressionParser>> testExpressionParsers() {
-        return testExpressionParsers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public MapBuilder<B, String, Object> properties() {
-        return properties;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    protected B self () {
-        return (B) this;
+    protected B self() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public JtwigParserConfiguration build() {
-        return new JtwigParserConfiguration(syntaxConfiguration.build(), addonParserProviders.build(), unaryOperators.build(), binaryOperators.build(), testExpressionParsers.build(), templateCache, properties.build());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -4,6 +4,7 @@ import org.jtwig.model.expression.InjectableExpression;
 import org.jtwig.model.position.Position;
 
 public class FilterNode extends ContentNode {
+
     private final InjectableExpression filterExpression;
 
     public FilterNode(Position position, Node content, InjectableExpression filterExpression) {
@@ -12,6 +13,6 @@ public class FilterNode extends ContentNode {
     }
 
     public InjectableExpression getFilterExpression() {
-        return filterExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

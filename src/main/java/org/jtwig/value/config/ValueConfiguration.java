@@ -4,20 +4,27 @@ import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.compare.ValueComparator;
 import org.jtwig.value.convert.Converter;
 import org.jtwig.value.convert.string.StringConverter;
-
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.Collection;
 
 public class ValueConfiguration {
+
     private final MathContext mathContext;
+
     private final RoundingMode roundingMode;
+
     private final Collection<Converter<Boolean>> booleanConverters;
+
     private final Collection<Converter<BigDecimal>> numberConverters;
+
     private final Collection<Converter<WrappedCollection>> collectionConverters;
+
     private final Collection<Converter<Character>> charConverters;
+
     private final ValueComparator valueComparator;
+
     private final StringConverter stringConverter;
 
     public ValueConfiguration(MathContext mathContext, RoundingMode roundingMode, Collection<Converter<Boolean>> booleanConverters, Collection<Converter<BigDecimal>> numberConverters, Collection<Converter<WrappedCollection>> collectionConverters, Collection<Converter<Character>> charConverters, ValueComparator valueComparator, StringConverter stringConverter) {
@@ -32,34 +39,34 @@ public class ValueConfiguration {
     }
 
     public MathContext getMathContext() {
-        return mathContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RoundingMode getRoundingMode() {
-        return roundingMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Converter<Boolean>> getBooleanConverters() {
-        return booleanConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Converter<BigDecimal>> getNumberConverters() {
-        return numberConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Converter<WrappedCollection>> getCollectionConverters() {
-        return collectionConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Converter<Character>> getCharConverters() {
-        return charConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ValueComparator getValueComparator() {
-        return valueComparator;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public StringConverter getStringConverter() {
-        return stringConverter;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -11,27 +11,15 @@ import org.jtwig.render.context.model.BlockDefinition;
 import org.jtwig.render.context.model.BlockReference;
 
 public class ParentFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "parent";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(0);
-        request.maximumNumberOfArguments(0);
-
-        String identifier = getBlockIdentifier(request);
-        BlockContext blockContext = getBlockContext(request);
-
-        BlockDefinition currentBlockDefinition = pollCurrentBlockDefinition(identifier, blockContext);
-        BlockDefinition parentBlockDefinition = getParentBlockDefinition(identifier, blockContext);
-
-        Object renderBlock = NodeRenderHelper.renderBlock(request, parentBlockDefinition);
-
-        restoreCurrentBlockDefinition(identifier, blockContext, currentBlockDefinition);
-
-        return renderBlock;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private void restoreCurrentBlockDefinition(String identifier, BlockContext blockContext, BlockDefinition currentBlockDefinition) {
@@ -40,21 +28,17 @@ public class ParentFunction extends SimpleJtwigFunction {
 
     private BlockDefinition getParentBlockDefinition(String identifier, BlockContext blockContext) {
         Optional<BlockDefinition> parentBlockDefinitionOptional = blockContext.get(identifier);
-
         if (!parentBlockDefinitionOptional.isPresent()) {
             throw new ParentFunctionWithoutExtending();
         }
-
         return parentBlockDefinitionOptional.get();
     }
 
     private BlockDefinition pollCurrentBlockDefinition(String identifier, BlockContext blockContext) {
         Optional<BlockDefinition> blockDefinitionOptional = blockContext.pollFirst(identifier);
-
         if (!blockDefinitionOptional.isPresent()) {
             throw new ParentFunctionOutsideBlockException();
         }
-
         return blockDefinitionOptional.get();
     }
 

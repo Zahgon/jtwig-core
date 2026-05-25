@@ -6,26 +6,20 @@ import org.jtwig.functions.SimpleJtwigFunction;
 import org.jtwig.value.Undefined;
 import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.convert.Converter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class JoinFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "join";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1).maximumNumberOfArguments(2);
-        String separator = "";
-        if (request.getNumberOfArguments() == 2) {
-            separator = getString(request, 1);
-        }
-
-        return join(request, request.get(0), separator);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getString(FunctionRequest request, int index) {
@@ -39,7 +33,6 @@ public class JoinFunction extends SimpleJtwigFunction {
     private String join(FunctionRequest request, Object input, String separator) {
         Converter<WrappedCollection> collectionConverter = request.getEnvironment().getValueEnvironment().getCollectionConverter();
         List<String> pieces = new ArrayList<>();
-
         WrappedCollection objects = collectionConverter.convert(input).or(WrappedCollection.singleton(input));
         for (Map.Entry<String, Object> entry : objects) {
             if (entry.getValue() != null && entry.getValue() != Undefined.UNDEFINED) {

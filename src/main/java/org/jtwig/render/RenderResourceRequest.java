@@ -4,9 +4,13 @@ import org.jtwig.resource.reference.ResourceReference;
 import org.jtwig.value.WrappedCollection;
 
 public class RenderResourceRequest {
+
     private final ResourceReference resource;
+
     private final boolean newBlockContext;
+
     private final boolean newValueContext;
+
     private final WrappedCollection includeModel;
 
     public RenderResourceRequest(ResourceReference resource, boolean newBlockContext, boolean newValueContext, WrappedCollection includeModel) {
@@ -17,18 +21,18 @@ public class RenderResourceRequest {
     }
 
     public ResourceReference getResource() {
-        return resource;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isNewBlockContext() {
-        return newBlockContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isNewValueContext() {
-        return newValueContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public WrappedCollection getIncludeModel() {
-        return includeModel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

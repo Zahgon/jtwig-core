@@ -8,6 +8,7 @@ import org.jtwig.property.resolver.MacroPropertyResolver;
 import org.jtwig.property.resolver.PropertyResolver;
 
 public class MacroPropertyResolverStrategy implements PropertyResolverStrategy {
+
     private final MacroRender macroRender;
 
     public MacroPropertyResolverStrategy(MacroRender macroRender) {
@@ -16,13 +17,6 @@ public class MacroPropertyResolverStrategy implements PropertyResolverStrategy {
 
     @Override
     public Optional<PropertyResolver> select(Request request) {
-        if (request.getLeftValue() instanceof ImportedMacros) {
-            if (request.getRightExpression() instanceof FunctionExpression) {
-                ImportedMacros importedMacros = (ImportedMacros) request.getLeftValue();
-                PropertyResolver propertyResolver = new MacroPropertyResolver(macroRender, importedMacros);
-                return Optional.of(propertyResolver);
-            }
-        }
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

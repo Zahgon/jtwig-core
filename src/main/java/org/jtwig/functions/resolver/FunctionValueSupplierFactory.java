@@ -5,7 +5,8 @@ import org.jtwig.functions.FunctionRequest;
 import org.jtwig.functions.JtwigFunction;
 
 public class FunctionValueSupplierFactory {
-    public Supplier<Object> create (JtwigFunction function, FunctionRequest request) {
-        return new FunctionValueSupplier(function, request);
+
+    public Supplier<Object> create(JtwigFunction function, FunctionRequest request) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

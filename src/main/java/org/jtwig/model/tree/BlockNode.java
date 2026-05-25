@@ -4,6 +4,7 @@ import org.jtwig.model.expression.VariableExpression;
 import org.jtwig.model.position.Position;
 
 public class BlockNode extends ContentNode {
+
     private final VariableExpression blockIdentifier;
 
     public BlockNode(Position position, VariableExpression blockIdentifier, Node content) {
@@ -12,10 +13,10 @@ public class BlockNode extends ContentNode {
     }
 
     public VariableExpression getBlockIdentifier() {
-        return blockIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getIdentifier() {
-        return blockIdentifier.getIdentifier();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

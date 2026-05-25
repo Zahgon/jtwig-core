@@ -5,6 +5,7 @@ import org.jtwig.model.position.Position;
 import org.jtwig.model.tree.include.IncludeConfiguration;
 
 public class IncludeNode extends Node {
+
     private final IncludeConfiguration configuration;
 
     public IncludeNode(Position position, IncludeConfiguration configuration) {
@@ -13,18 +14,18 @@ public class IncludeNode extends Node {
     }
 
     public Expression getMapExpression() {
-        return configuration.getMap();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isInheritModel() {
-        return configuration.isInheritModel();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isIgnoreMissing() {
-        return configuration.isIgnoreMissing();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Expression getResourceExpression () {
-        return configuration.getInclude();
+    public Expression getResourceExpression() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -8,36 +8,21 @@ import org.jtwig.parser.parboiled.model.Keyword;
 import org.parboiled.Rule;
 
 public class BooleanExpressionParser extends ExpressionParser<ConstantExpression> {
+
     public BooleanExpressionParser(ParserContext context) {
         super(BooleanExpressionParser.class, context);
     }
 
     @Override
     public Rule ExpressionRule() {
-        return FirstOf(
-                TrueRule(),
-                FalseRule()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-
-    public Rule TrueRule () {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        LexicParser lexicParser = parserContext().parser(LexicParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                lexicParser.Keyword(Keyword.TRUE),
-                push(new ConstantExpression(positionTrackerParser.pop(), true))
-        );
+    public Rule TrueRule() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Rule FalseRule () {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        LexicParser lexicParser = parserContext().parser(LexicParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                lexicParser.Keyword(Keyword.FALSE),
-                push(new ConstantExpression(positionTrackerParser.pop(), false))
-        );
+    public Rule FalseRule() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

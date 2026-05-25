@@ -4,14 +4,15 @@ import org.jtwig.exceptions.CalculationException;
 import org.jtwig.model.expression.Expression;
 import org.jtwig.model.position.Position;
 import org.jtwig.render.RenderRequest;
-
 import java.util.List;
-
 import static org.jtwig.util.ErrorMessageFormatter.errorMessage;
 
 public class FunctionRequest extends RenderRequest {
+
     private final Position position;
+
     private final String functionName;
+
     private final FunctionArguments functionArguments;
 
     public FunctionRequest(RenderRequest request, Position position, String functionName, FunctionArguments functionArguments) {
@@ -22,50 +23,46 @@ public class FunctionRequest extends RenderRequest {
     }
 
     public Position getPosition() {
-        return position;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public int getNumberOfArguments () {
-        return functionArguments.size();
+    public int getNumberOfArguments() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Object> getArguments() {
-        return functionArguments.getValues();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public List<Expression> getExpressionArguments () {
-        return functionArguments.getExpressions();
+    public List<Expression> getExpressionArguments() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public FunctionRequest minimumNumberOfArguments(int number) {
-        if (functionArguments.size() < number) {
-            throw exception(String.format("Expected at least %d arguments", number));
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public FunctionRequest maximumNumberOfArguments(int number) {
-        if (functionArguments.size() > number) {
-            throw exception(String.format("Expected at most %d arguments", number));
-        }
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CalculationException exception(String message) {
-        return new CalculationException(errorMessage(position, String.format("Function %s error: %s", functionName, message)));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CalculationException exception(String message, Throwable e) {
-        return new CalculationException(errorMessage(position, String.format("Function %s error: %s", functionName, message)), e);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Object get(int index) {
-        return functionArguments.getValue(index);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Expression getExpression (int index) { return functionArguments.getExpression(index); }
+    public Expression getExpression(int index) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     public Object[] getRemainingArguments(int start) {
-        return functionArguments.getRemainingArguments(start);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

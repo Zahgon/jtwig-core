@@ -6,6 +6,7 @@ import org.jtwig.reflection.model.Value;
 import org.jtwig.value.Undefined;
 
 public class JtwigModelValueContext implements ValueContext {
+
     private final JtwigModel jtwigModel;
 
     public JtwigModelValueContext(JtwigModel jtwigModel) {
@@ -14,16 +15,11 @@ public class JtwigModelValueContext implements ValueContext {
 
     @Override
     public Object resolve(String key) {
-        Optional<Value> result = jtwigModel.get(key);
-        if (result.isPresent()) {
-            return result.get().getValue();
-        } else {
-            return Undefined.UNDEFINED;
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public ValueContext with(String key, Object value) {
-        throw new IllegalArgumentException("JtwigModelValueContext cannot implement such write operation as it is readonly. Tip: Wrap it inside a modifiable value context");
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -6,16 +6,9 @@ import org.jtwig.render.expression.CalculateExpressionService;
 import org.jtwig.value.convert.Converter;
 
 public class TernaryExpressionCalculator implements ExpressionCalculator<TernaryOperationExpression> {
+
     @Override
     public Object calculate(RenderRequest request, TernaryOperationExpression expression) {
-        CalculateExpressionService calculateExpressionService = request.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-        Converter<Boolean> booleanConverter = request.getEnvironment().getValueEnvironment().getBooleanConverter();
-
-        Object calculate = calculateExpressionService.calculate(request, expression.getFirstExpression());
-        if (booleanConverter.convert(calculate).or(true)) {
-            return calculateExpressionService.calculate(request, expression.getSecondExpression());
-        } else {
-            return calculateExpressionService.calculate(request, expression.getThirdExpression());
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

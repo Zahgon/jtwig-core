@@ -5,6 +5,7 @@ import org.jtwig.property.configuration.PropertyResolverConfiguration;
 import org.jtwig.property.configuration.PropertyResolverConfigurationBuilder;
 
 public class AndPropertyResolverConfigurationBuilder extends PropertyResolverConfigurationBuilder<AndPropertyResolverConfigurationBuilder> implements AndBuilder<EnvironmentConfigurationBuilder> {
+
     private final EnvironmentConfigurationBuilder parent;
 
     public AndPropertyResolverConfigurationBuilder(EnvironmentConfigurationBuilder parent) {
@@ -18,6 +19,6 @@ public class AndPropertyResolverConfigurationBuilder extends PropertyResolverCon
 
     @Override
     public EnvironmentConfigurationBuilder and() {
-        return parent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

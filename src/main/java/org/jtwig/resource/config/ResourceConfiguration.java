@@ -3,16 +3,20 @@ package org.jtwig.resource.config;
 import org.jtwig.resource.loader.TypedResourceLoader;
 import org.jtwig.resource.reference.ResourceReferenceExtractor;
 import org.jtwig.resource.resolver.RelativeResourceResolver;
-
 import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.List;
 
 public class ResourceConfiguration {
+
     private final Collection<RelativeResourceResolver> relativeResourceResolvers;
+
     private final Collection<String> absoluteResourceTypes;
+
     private final List<TypedResourceLoader> resourceLoaders;
+
     private final ResourceReferenceExtractor resourceReferenceExtractor;
+
     private final Charset defaultCharset;
 
     public ResourceConfiguration(Collection<RelativeResourceResolver> relativeResourceResolvers, Collection<String> absoluteResourceTypes, List<TypedResourceLoader> resourceLoaders, ResourceReferenceExtractor resourceReferenceExtractor, Charset defaultCharset) {
@@ -24,22 +28,22 @@ public class ResourceConfiguration {
     }
 
     public Collection<String> getAbsoluteResourceTypes() {
-        return absoluteResourceTypes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<TypedResourceLoader> getResourceLoaders() {
-        return resourceLoaders;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<RelativeResourceResolver> getRelativeResourceResolvers() {
-        return relativeResourceResolvers;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ResourceReferenceExtractor getResourceReferenceExtractor() {
-        return resourceReferenceExtractor;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Charset getDefaultCharset() {
-        return defaultCharset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

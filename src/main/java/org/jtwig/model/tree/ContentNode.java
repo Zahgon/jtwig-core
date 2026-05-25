@@ -4,6 +4,7 @@ import org.jtwig.model.position.Position;
 import org.jtwig.model.tree.visitor.NodeVisitor;
 
 public class ContentNode extends Node {
+
     private final Node content;
 
     protected ContentNode(Position position, Node content) {
@@ -12,12 +13,11 @@ public class ContentNode extends Node {
     }
 
     public Node getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void visit(NodeVisitor nodeConsumer) {
-        super.visit(nodeConsumer);
-        content.visit(nodeConsumer);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

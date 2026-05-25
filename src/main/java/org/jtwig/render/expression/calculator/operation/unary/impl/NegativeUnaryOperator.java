@@ -3,13 +3,14 @@ package org.jtwig.render.expression.calculator.operation.unary.impl;
 import org.jtwig.render.expression.calculator.operation.unary.UnaryOperator;
 
 public class NegativeUnaryOperator implements UnaryOperator {
+
     @Override
     public String symbol() {
-        return "-";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int precedence() {
-        return 5;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -6,7 +6,9 @@ import org.jtwig.render.RenderRequest;
 import org.jtwig.render.context.RenderContext;
 
 public class SelectionRequest extends RenderRequest {
+
     private final Expression leftExpression;
+
     private final Expression rightExpression;
 
     public SelectionRequest(RenderContext renderContext, Environment environment, Expression leftExpression, Expression rightExpression) {
@@ -16,10 +18,10 @@ public class SelectionRequest extends RenderRequest {
     }
 
     public Expression getLeftExpression() {
-        return leftExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getRightExpression() {
-        return rightExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

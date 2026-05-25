@@ -4,8 +4,11 @@ import org.jtwig.escape.EscapeEngine;
 import org.jtwig.escape.EscapeEngineSelector;
 
 public class EscapeEnvironment {
+
     private final EscapeEngine initialEscapeEngine;
+
     private final String defaultEscapeEngine;
+
     private final EscapeEngineSelector escapeEngineSelector;
 
     public EscapeEnvironment(EscapeEngine initialEscapeEngine, String defaultEscapeEngine, EscapeEngineSelector escapeEngineSelector) {
@@ -15,14 +18,14 @@ public class EscapeEnvironment {
     }
 
     public EscapeEngine getInitialEscapeEngine() {
-        return initialEscapeEngine;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getDefaultEscapeEngine() {
-        return defaultEscapeEngine;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public EscapeEngineSelector getEscapeEngineSelector() {
-        return escapeEngineSelector;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

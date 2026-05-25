@@ -3,12 +3,14 @@ package org.jtwig.model.expression;
 import org.jtwig.exceptions.CalculationException;
 import org.jtwig.model.position.Position;
 import org.jtwig.render.expression.calculator.operation.binary.BinaryOperator;
-
 import static org.jtwig.util.ErrorMessageFormatter.errorMessage;
 
 public class BinaryOperationExpression extends InjectableExpression {
+
     private final Expression leftOperand;
+
     private final BinaryOperator binaryOperator;
+
     private final Expression rightOperand;
 
     public BinaryOperationExpression(Position position, Expression leftOperand, BinaryOperator binaryOperator, Expression rightOperand) {
@@ -19,24 +21,19 @@ public class BinaryOperationExpression extends InjectableExpression {
     }
 
     public Expression getLeftOperand() {
-        return leftOperand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BinaryOperator getBinaryOperator() {
-        return binaryOperator;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getRightOperand() {
-        return rightOperand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Expression inject(Expression expression) {
-        if (leftOperand instanceof InjectableExpression) {
-            Expression inject = ((InjectableExpression) leftOperand).inject(expression);
-            return new BinaryOperationExpression(getPosition(), inject, binaryOperator, rightOperand);
-        } else {
-            throw new CalculationException(errorMessage(getPosition(), "Invalid expression, expecting a valid injectable expression (binary operator, variable or function)"));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

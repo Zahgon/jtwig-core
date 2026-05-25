@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PropertiesContext {
-    public static PropertiesContext newContext () {
-        return new PropertiesContext(new HashMap<String, Object>());
+
+    public static PropertiesContext newContext() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final Map<String, Object> properties;
@@ -14,15 +15,15 @@ public class PropertiesContext {
         this.properties = properties;
     }
 
-    public void set (String key, Object value) {
-        properties.put(key, value);
+    public void set(String key, Object value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public <T> T get (String key) {
-        return (T) properties.get(key);
+    public <T> T get(String key) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public boolean has (String key) {
-        return properties.containsKey(key);
+    public boolean has(String key) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

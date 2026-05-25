@@ -6,19 +6,26 @@ import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.compare.ValueComparator;
 import org.jtwig.value.convert.Converter;
 import org.jtwig.value.convert.string.StringConverter;
-
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
 public class ValueConfigurationBuilder<B extends ValueConfigurationBuilder> implements Builder<ValueConfiguration> {
+
     private MathContext mathContext;
+
     private RoundingMode roundingMode;
+
     private final ListBuilder<B, Converter<Boolean>> booleanConverters;
+
     private final ListBuilder<B, Converter<BigDecimal>> numberConverters;
+
     private final ListBuilder<B, Converter<WrappedCollection>> collectionConverters;
+
     private final ListBuilder<B, Converter<Character>> charConverters;
+
     private ValueComparator valueComparator;
+
     private StringConverter stringConverter;
 
     public ValueConfigurationBuilder() {
@@ -40,39 +47,35 @@ public class ValueConfigurationBuilder<B extends ValueConfigurationBuilder> impl
     }
 
     public B withMathContext(MathContext mathContext) {
-        this.mathContext = mathContext;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withRoundingMode(RoundingMode roundingMode) {
-        this.roundingMode = roundingMode;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, Converter<Boolean>> booleanConverters() {
-        return booleanConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, Converter<BigDecimal>> numberConverters() {
-        return numberConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, Converter<WrappedCollection>> collectionConverters() {
-        return collectionConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, Converter<Character>> charConverters() {
-        return charConverters;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withValueComparator(ValueComparator valueComparator) {
-        this.valueComparator = valueComparator;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withStringConverter(StringConverter stringConverter) {
-        this.stringConverter = stringConverter;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private B self() {
@@ -81,8 +84,6 @@ public class ValueConfigurationBuilder<B extends ValueConfigurationBuilder> impl
 
     @Override
     public ValueConfiguration build() {
-        return new ValueConfiguration(mathContext, roundingMode, booleanConverters.build(),
-                numberConverters.build(), collectionConverters.build(),
-                charConverters.build(), valueComparator, stringConverter);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

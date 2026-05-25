@@ -4,6 +4,7 @@ import org.jtwig.model.expression.VariableExpression;
 import org.jtwig.model.position.Position;
 
 public class ImportSelfNode extends Node {
+
     private final VariableExpression aliasIdentifier;
 
     public ImportSelfNode(Position position, VariableExpression aliasIdentifier) {
@@ -12,6 +13,6 @@ public class ImportSelfNode extends Node {
     }
 
     public VariableExpression getAliasIdentifier() {
-        return aliasIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

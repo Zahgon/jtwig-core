@@ -5,6 +5,7 @@ import org.jtwig.value.config.ValueConfiguration;
 import org.jtwig.value.config.ValueConfigurationBuilder;
 
 public class AndValueConfigurationBuilder extends ValueConfigurationBuilder<AndValueConfigurationBuilder> implements AndBuilder<EnvironmentConfigurationBuilder> {
+
     private final EnvironmentConfigurationBuilder environmentConfigurationBuilder;
 
     public AndValueConfigurationBuilder(EnvironmentConfigurationBuilder environmentConfigurationBuilder) {
@@ -18,6 +19,6 @@ public class AndValueConfigurationBuilder extends ValueConfigurationBuilder<AndV
 
     @Override
     public EnvironmentConfigurationBuilder and() {
-        return environmentConfigurationBuilder;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

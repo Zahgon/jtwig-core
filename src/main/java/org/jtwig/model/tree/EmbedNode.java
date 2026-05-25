@@ -4,11 +4,12 @@ import org.jtwig.model.expression.Expression;
 import org.jtwig.model.position.Position;
 import org.jtwig.model.tree.include.IncludeConfiguration;
 import org.jtwig.model.tree.visitor.NodeVisitor;
-
 import java.util.Collection;
 
 public class EmbedNode extends Node {
+
     private final Collection<OverrideBlockNode> nodes;
+
     private final IncludeConfiguration includeConfiguration;
 
     public EmbedNode(Position position, Collection<OverrideBlockNode> nodes, IncludeConfiguration includeConfiguration) {
@@ -18,28 +19,27 @@ public class EmbedNode extends Node {
     }
 
     public Collection<OverrideBlockNode> getNodes() {
-        return nodes;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public Expression getResourceExpression () { return includeConfiguration.getInclude(); }
+    public Expression getResourceExpression() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
     public Expression getMapExpression() {
-        return includeConfiguration.getMap();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isInheritModel() {
-        return includeConfiguration.isInheritModel();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isIgnoreMissing() {
-        return includeConfiguration.isIgnoreMissing();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public void visit(NodeVisitor nodeConsumer) {
-        super.visit(nodeConsumer);
-        for (OverrideBlockNode node : nodes) {
-            node.visit(nodeConsumer);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

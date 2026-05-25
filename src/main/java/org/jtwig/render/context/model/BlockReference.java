@@ -1,6 +1,7 @@
 package org.jtwig.render.context.model;
 
 public class BlockReference {
+
     private String identifier;
 
     public BlockReference(String identifier) {
@@ -8,6 +9,6 @@ public class BlockReference {
     }
 
     public String getIdentifier() {
-        return identifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

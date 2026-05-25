@@ -9,11 +9,8 @@ import org.jtwig.property.selection.CachedSelectionPropertyResolver;
 import org.jtwig.property.selection.SelectionPropertyResolveService;
 
 public class PropertyResolverEnvironmentFactory {
-    public PropertyResolverEnvironment create (PropertyResolverConfiguration configuration) {
-        SelectionPropertyResolveService selectionPropertyResolveService = new SelectionPropertyResolveService(new PropertyResolveRequestFactory(new PropertyNameExtractor(), new ArgumentsExtractor()));
-        BaseSelectionPropertyResolver selectionPropertyResolver = new BaseSelectionPropertyResolver(configuration.getPropertyResolverStrategies(), selectionPropertyResolveService);
-        return new PropertyResolverEnvironment(
-                new CachedSelectionPropertyResolver(configuration.getCache(), selectionPropertyResolver, selectionPropertyResolveService)
-        );
+
+    public PropertyResolverEnvironment create(PropertyResolverConfiguration configuration) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -1,6 +1,7 @@
 package org.jtwig.parser.parboiled.model;
 
 public enum Keyword {
+
     // MARKs
     INCLUDE("include"),
     SET("set"),
@@ -20,7 +21,6 @@ public enum Keyword {
     END_EMBED("endembed"),
     TRUE("true"),
     FALSE("false"),
-
     // Internal
     IN("in"),
     AS("as"),
@@ -37,8 +37,7 @@ public enum Keyword {
     NULL("null"),
     IS("is"),
     NOT("not"),
-    WITH("with")
-    ;
+    WITH("with");
 
     private final String symbol;
 
@@ -46,9 +45,8 @@ public enum Keyword {
         this.symbol = symbol;
     }
 
-
     @Override
     public String toString() {
-        return symbol;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

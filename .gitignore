@@ -18,3 +18,7 @@ hs_err_pid*
 
 # Maven
 pom.xml
+.aider*
+logs/
+.commit0_scripts/
+.github/workflows/

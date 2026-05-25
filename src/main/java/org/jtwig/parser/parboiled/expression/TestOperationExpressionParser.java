@@ -11,6 +11,7 @@ import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
 
 public class TestOperationExpressionParser extends ExpressionParser<TestOperationExpression> {
+
     public TestOperationExpressionParser(ParserContext context) {
         super(TestOperationExpressionParser.class, context);
     }
@@ -18,19 +19,6 @@ public class TestOperationExpressionParser extends ExpressionParser<TestOperatio
     @Override
     @Label("Test Operation")
     public Rule ExpressionRule() {
-        SpacingParser spacingParser = parserContext().parser(SpacingParser.class);
-        SimpleExpressionParser simpleExpressionParser = parserContext().parser(SimpleExpressionParser.class);
-        AnyTestExpressionParser testExpressionParser = parserContext().parser(AnyTestExpressionParser.class);
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                simpleExpressionParser.ExpressionRule(),
-                spacingParser.Spacing(),
-                parserContext().parser(LexicParser.class).Keyword(Keyword.IS),
-                spacingParser.Spacing(),
-                testExpressionParser.Test(),
-
-                push(new TestOperationExpression(positionTrackerParser.pop(2), simpleExpressionParser.pop(1), testExpressionParser.pop()))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

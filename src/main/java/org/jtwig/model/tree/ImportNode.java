@@ -5,7 +5,9 @@ import org.jtwig.model.expression.VariableExpression;
 import org.jtwig.model.position.Position;
 
 public class ImportNode extends Node {
+
     private final Expression importExpression;
+
     private final VariableExpression aliasIdentifier;
 
     public ImportNode(Position position, Expression importExpression, VariableExpression aliasIdentifier) {
@@ -15,10 +17,10 @@ public class ImportNode extends Node {
     }
 
     public Expression getImportExpression() {
-        return importExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public VariableExpression getAliasIdentifier() {
-        return aliasIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

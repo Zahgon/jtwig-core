@@ -1,16 +1,17 @@
 package org.jtwig.value.context;
 
 import org.jtwig.value.Undefined;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class MapValueContext implements ValueContext {
-    public static MapValueContext newContext () {
-        return new MapValueContext(new HashMap<String, Object>());
+
+    public static MapValueContext newContext() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-    public static MapValueContext newContext (Map<String, Object> map) {
-        return new MapValueContext(new HashMap<>(map));
+
+    public static MapValueContext newContext(Map<String, Object> map) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final Map<String, Object> values;
@@ -21,13 +22,11 @@ public class MapValueContext implements ValueContext {
 
     @Override
     public Object resolve(String key) {
-        if (values.containsKey(key)) return values.get(key);
-        else return Undefined.UNDEFINED;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public ValueContext with(String key, Object value) {
-        values.put(key, value);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

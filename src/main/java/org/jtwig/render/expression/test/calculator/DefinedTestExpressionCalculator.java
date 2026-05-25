@@ -9,14 +9,9 @@ import org.jtwig.render.expression.CalculateExpressionService;
 import org.jtwig.value.Undefined;
 
 public class DefinedTestExpressionCalculator implements TestExpressionCalculator<DefinedTestExpression> {
+
     @Override
     public Object calculate(RenderRequest request, Position position, DefinedTestExpression test, Expression argument) {
-        CalculateExpressionService calculateExpressionService = request.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-        try {
-            Object value = calculateExpressionService.calculate(request, argument);
-            return value != Undefined.UNDEFINED;
-        } catch (ResolveValueException e) {
-            return false;
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class FieldPropertyResolver implements PropertyResolver {
+
     private static final Logger logger = LoggerFactory.getLogger(FieldPropertyResolver.class);
+
     private final JavaField field;
 
     public FieldPropertyResolver(JavaField field) {
@@ -17,11 +19,6 @@ public class FieldPropertyResolver implements PropertyResolver {
 
     @Override
     public Optional<Value> resolve(PropertyResolveRequest request) {
-        try {
-            return Optional.of(new Value(field.value(request.getContext())));
-        } catch (IllegalAccessException | IllegalArgumentException e) {
-            logger.debug("Unable to access field {} on object {}", field, request.getContext());
-            return Optional.absent();
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

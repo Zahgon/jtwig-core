@@ -4,16 +4,18 @@ import com.google.common.base.Function;
 import org.jtwig.model.expression.Expression;
 
 public class EmptyExpressionResolver implements Function<Expression, Object> {
+
     public static EmptyExpressionResolver INSTANCE = new EmptyExpressionResolver();
 
-    public static EmptyExpressionResolver instance () {
-        return INSTANCE;
+    public static EmptyExpressionResolver instance() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    private EmptyExpressionResolver() {}
+    private EmptyExpressionResolver() {
+    }
 
     @Override
     public Object apply(Expression input) {
-        return null;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

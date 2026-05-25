@@ -3,9 +3,13 @@ package org.jtwig.model.tree.include;
 import org.jtwig.model.expression.Expression;
 
 public class IncludeConfiguration {
+
     private final boolean inheritModel;
+
     private final boolean ignoreMissing;
+
     private final Expression include;
+
     private final Expression map;
 
     public IncludeConfiguration(Expression include, Expression map, boolean inheritModel, boolean ignoreMissing) {
@@ -16,18 +20,18 @@ public class IncludeConfiguration {
     }
 
     public boolean isInheritModel() {
-        return inheritModel;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public boolean isIgnoreMissing() {
-        return ignoreMissing;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getInclude() {
-        return include;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getMap() {
-        return map;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

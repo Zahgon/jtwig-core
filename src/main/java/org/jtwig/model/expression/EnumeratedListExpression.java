@@ -1,10 +1,10 @@
 package org.jtwig.model.expression;
 
 import org.jtwig.model.position.Position;
-
 import java.util.Collection;
 
 public class EnumeratedListExpression extends Expression {
+
     private final Collection<Expression> expressions;
 
     public EnumeratedListExpression(Position position, Collection<Expression> expressions) {
@@ -13,6 +13,6 @@ public class EnumeratedListExpression extends Expression {
     }
 
     public Collection<Expression> getExpressions() {
-        return expressions;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

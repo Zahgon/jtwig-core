@@ -8,13 +8,10 @@ import org.jtwig.renderable.Renderable;
 import org.jtwig.renderable.impl.StringRenderable;
 
 public class OutputNodeRender implements NodeRender<OutputNode> {
+
     @Override
     public Renderable render(RenderRequest request, OutputNode node) {
-        CalculateExpressionService calculateExpressionService = request.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-
-        Object calculate = calculateExpressionService.calculate(request, node.getExpression());
-        EscapeEngine escapeEngine = request.getRenderContext().getCurrent(EscapeEngine.class);
-        return new StringRenderable(getString(request, calculate), escapeEngine);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getString(RenderRequest request, Object input) {

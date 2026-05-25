@@ -6,6 +6,7 @@ import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
 
 public class SimpleExpressionParser extends ExpressionParser<Expression> {
+
     public SimpleExpressionParser(ParserContext context) {
         super(SimpleExpressionParser.class, context);
     }
@@ -13,12 +14,6 @@ public class SimpleExpressionParser extends ExpressionParser<Expression> {
     @Override
     @Label("Simple Expression")
     public Rule ExpressionRule() {
-        return FirstOf(
-                parserContext().parser(TernaryOperationExpressionParser.class).ExpressionRule(),
-                parserContext().parser(MapSelectionExpressionParser.class).ExpressionRule(),
-                parserContext().parser(BinaryOperationExpressionParser.class).ExpressionRule(),
-                parserContext().parser(PrimaryExpressionParser.class).ExpressionRule()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

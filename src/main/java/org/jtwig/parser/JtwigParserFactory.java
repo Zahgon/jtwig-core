@@ -6,14 +6,8 @@ import org.jtwig.parser.config.JtwigParserConfiguration;
 import org.jtwig.parser.parboiled.ParboiledJtwigParser;
 
 public class JtwigParserFactory {
-    public JtwigParser create (JtwigParserConfiguration configuration) {
-        ParboiledJtwigParser parboiledJtwigParser = new ParboiledJtwigParser(configuration);
-        Optional<TemplateCache> templateCache = configuration.getTemplateCache();
-        if (templateCache.isPresent()) {
-            return new CachedJtwigParser(templateCache.get(), parboiledJtwigParser);
-        } else {
-            return parboiledJtwigParser;
-        }
-    }
 
+    public JtwigParser create(JtwigParserConfiguration configuration) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

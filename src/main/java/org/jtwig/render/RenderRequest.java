@@ -4,7 +4,9 @@ import org.jtwig.environment.Environment;
 import org.jtwig.render.context.RenderContext;
 
 public class RenderRequest {
+
     private final RenderContext renderContext;
+
     private final Environment environment;
 
     public RenderRequest(RenderContext renderContext, Environment environment) {
@@ -13,10 +15,10 @@ public class RenderRequest {
     }
 
     public RenderContext getRenderContext() {
-        return renderContext;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Environment getEnvironment() {
-        return environment;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

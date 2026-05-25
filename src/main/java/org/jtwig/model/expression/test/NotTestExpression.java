@@ -1,11 +1,9 @@
 package org.jtwig.model.expression.test;
 
 public class NotTestExpression extends TestExpression {
+
     public static TestExpression create(Boolean isNot, TestExpression nested) {
-        if (isNot) {
-            return new NotTestExpression(nested);
-        }
-        return nested;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final TestExpression testExpression;
@@ -15,6 +13,6 @@ public class NotTestExpression extends TestExpression {
     }
 
     public TestExpression getTestExpression() {
-        return testExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -6,18 +6,13 @@ import org.jtwig.parser.parboiled.base.SpacingParser;
 import org.parboiled.Rule;
 
 public class IsFunctionTestExpressionParser extends TestExpressionParser<IsFunctionTestExpression> {
+
     public IsFunctionTestExpressionParser(ParserContext context) {
         super(IsFunctionTestExpressionParser.class, context);
     }
 
     @Override
     public Rule Test() {
-        SpacingParser spacingParser = parserContext().parser(SpacingParser.class);
-
-        return Sequence(
-                String("function"),
-                spacingParser.Spacing(),
-                push(new IsFunctionTestExpression())
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

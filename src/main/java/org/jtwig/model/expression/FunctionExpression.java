@@ -1,12 +1,13 @@
 package org.jtwig.model.expression;
 
 import org.jtwig.model.position.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class FunctionExpression extends InjectableExpression {
+
     private final String functionIdentifier;
+
     private final List<Expression> arguments;
 
     public FunctionExpression(Position position, String functionIdentifier, List<Expression> arguments) {
@@ -16,18 +17,15 @@ public class FunctionExpression extends InjectableExpression {
     }
 
     public String getFunctionIdentifier() {
-        return functionIdentifier;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<Expression> getArguments() {
-        return arguments;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Expression inject(Expression expression) {
-        List<Expression> arguments = new ArrayList<>();
-        arguments.add(expression);
-        arguments.addAll(getArguments());
-        return new FunctionExpression(getPosition(), functionIdentifier, arguments);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

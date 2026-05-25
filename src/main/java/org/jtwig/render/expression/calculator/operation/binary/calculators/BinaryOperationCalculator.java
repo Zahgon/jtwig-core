@@ -5,11 +5,15 @@ import org.jtwig.model.position.Position;
 import org.jtwig.render.RenderRequest;
 
 public interface BinaryOperationCalculator {
+
     Object calculate(Request request);
 
     class Request extends RenderRequest {
+
         private final Position position;
+
         private final Expression leftOperand;
+
         private final Expression rightOperand;
 
         public Request(RenderRequest request, Position position, Expression leftOperand, Expression rightOperand) {
@@ -20,15 +24,15 @@ public interface BinaryOperationCalculator {
         }
 
         public Position getPosition() {
-            return position;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Expression getLeftOperand() {
-            return leftOperand;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Expression getRightOperand() {
-            return rightOperand;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

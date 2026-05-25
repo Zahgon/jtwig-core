@@ -3,21 +3,23 @@ package org.jtwig.resource.resolver.path;
 import java.io.File;
 
 public class RelativeFilePathResolver implements RelativeReferenceResolver {
+
     private static final RelativeFilePathResolver INSTANCE = new RelativeFilePathResolver();
 
-    public static RelativeFilePathResolver instance () {
-        return INSTANCE;
+    public static RelativeFilePathResolver instance() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    private RelativeFilePathResolver() {}
+    private RelativeFilePathResolver() {
+    }
 
     @Override
     public boolean isRelative(String path) {
-        return !new File(path).isAbsolute();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String resolve(String parent, String child) {
-        return new File(new File(parent).getParentFile(), child).getPath();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

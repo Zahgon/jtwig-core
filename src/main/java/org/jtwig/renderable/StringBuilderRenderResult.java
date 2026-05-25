@@ -1,21 +1,21 @@
 package org.jtwig.renderable;
 
 public class StringBuilderRenderResult implements RenderResult {
+
     private final StringBuilder builder = new StringBuilder();
 
     @Override
     public RenderResult append(String content) {
-        builder.append(content);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public RenderResult flush() {
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String content() {
-        return builder.toString();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -6,7 +6,9 @@ import org.jtwig.property.strategy.PropertyResolverStrategy;
 import org.jtwig.util.builder.ListBuilder;
 
 public class PropertyResolverConfigurationBuilder<B extends PropertyResolverConfigurationBuilder> implements Builder<PropertyResolverConfiguration> {
+
     private SelectionPropertyResolverCache cache;
+
     private final ListBuilder<B, PropertyResolverStrategy> propertyResolverStrategies;
 
     public PropertyResolverConfigurationBuilder() {
@@ -19,23 +21,19 @@ public class PropertyResolverConfigurationBuilder<B extends PropertyResolverConf
     }
 
     public B withCache(SelectionPropertyResolverCache cache) {
-        this.cache = cache;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ListBuilder<B, PropertyResolverStrategy> propertyResolverStrategies() {
-        return propertyResolverStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public PropertyResolverConfiguration build() {
-        return new PropertyResolverConfiguration(
-                cache,
-                propertyResolverStrategies.build()
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    protected B self () {
-        return (B) this;
+    protected B self() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

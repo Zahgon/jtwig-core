@@ -8,10 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MacroNodeRender implements NodeRender<MacroNode> {
+
     private final static Logger log = LoggerFactory.getLogger(MacroNodeRender.class);
 
     @Override
     public Renderable render(RenderRequest request, MacroNode node) {
-        return EmptyRenderable.instance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

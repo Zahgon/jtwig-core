@@ -9,30 +9,13 @@ import org.jtwig.parser.parboiled.expression.AnyExpressionParser;
 import org.parboiled.Rule;
 
 public class OutputNodeParser extends NodeParser<OutputNode> {
+
     public OutputNodeParser(ParserContext context) {
         super(OutputNodeParser.class, context);
     }
 
     @Override
     public Rule NodeRule() {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        LimitsParser limitsParser = parserContext().parser(LimitsParser.class);
-        SpacingParser spacingParser = parserContext().parser(SpacingParser.class);
-        AnyExpressionParser anyExpressionParser = parserContext().parser(AnyExpressionParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-
-                limitsParser.startOutput(),
-                spacingParser.Spacing(),
-                Mandatory(anyExpressionParser.ExpressionRule(), "Missing or invalid output expression"),
-                spacingParser.Spacing(),
-
-                Mandatory(limitsParser.endOutput(), "Expecting end of output code island (Hint: Try to wrap parts of your expression in parentheses)"),
-
-                push(new OutputNode(
-                        positionTrackerParser.pop(1),
-                        anyExpressionParser.pop()
-                ))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

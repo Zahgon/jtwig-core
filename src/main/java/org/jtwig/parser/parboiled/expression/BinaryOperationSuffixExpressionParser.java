@@ -11,13 +11,13 @@ import org.jtwig.parser.parboiled.expression.operator.BinaryOperatorParser;
 import org.jtwig.render.expression.calculator.operation.binary.BinaryOperator;
 import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class BinaryOperationSuffixExpressionParser extends ExpressionParser<BinaryOperationExpression> {
+
     final Collection<BinaryOperator> operators;
 
     public BinaryOperationSuffixExpressionParser(ParserContext context, Collection<BinaryOperator> operators) {
@@ -28,46 +28,14 @@ public class BinaryOperationSuffixExpressionParser extends ExpressionParser<Bina
     @Override
     @Label("BinaryOperationSuffix Expression")
     public Rule ExpressionRule() {
-        Rule initialExpression = EMPTY;
-        ImmutableListMultimap<Integer, BinaryOperator> index = Multimaps.index(operators, precedence());
-
-        List<Integer> integers = new ArrayList<>(index.keySet());
-        Collections.sort(integers);
-        for (Integer integer : integers) {
-            initialExpression = BinaryOperation(initialExpression, index.get(integer));
-        }
-        return initialExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Function<BinaryOperator, Integer> precedence() {
-        return new Function<BinaryOperator, Integer>() {
-            @Override
-            public Integer apply(BinaryOperator input) {
-                return input.precedence();
-            }
-        };
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Rule BinaryOperation(Rule expressionRule, List<BinaryOperator> operators) {
-        return Sequence(
-                expressionRule,
-                parserContext().parser(SpacingParser.class).Spacing(),
-                ZeroOrMore(
-                        parserContext().parser(PositionTrackerParser.class).PushPosition(),
-                        parserContext().parser(BinaryOperatorParser.class).BinaryOperator(operators),
-                        parserContext().parser(SpacingParser.class).Spacing(),
-                        Sequence(
-                                parserContext().parser(PrimaryExpressionParser.class).ExpressionRule(),
-                                expressionRule
-                        ),
-                        push(new BinaryOperationExpression(
-                                parserContext().parser(PositionTrackerParser.class).pop(2),
-                                pop(2),
-                                parserContext().parser(BinaryOperatorParser.class).pop(1),
-                                pop()
-                        ))
-                )
-
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

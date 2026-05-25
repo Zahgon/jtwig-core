@@ -11,19 +11,9 @@ import org.jtwig.renderable.impl.StringRenderable;
 import org.jtwig.util.ErrorMessageFormatter;
 
 public class ContentEscapeNodeRender implements NodeRender<ContentEscapeNode> {
+
     @Override
     public Renderable render(RenderRequest request, ContentEscapeNode node) {
-        String escapeModeName = node.getEscapeEngineName().or(request.getEnvironment().getEscapeEnvironment().getDefaultEscapeEngine());
-        Optional<EscapeEngine> escapeEngineOptional = request.getEnvironment().getEscapeEnvironment().getEscapeEngineSelector().escapeEngineFor(escapeModeName);
-        if (escapeEngineOptional.isPresent()) {
-            Renderable renderable = request.getEnvironment().getRenderEnvironment().getRenderNodeService()
-                    .render(request, node.getContent());
-            return new StringRenderable(
-                    renderable.appendTo(new StringBuilderRenderResult()).content(),
-                    escapeEngineOptional.get()
-            );
-        } else {
-            throw new RenderException(ErrorMessageFormatter.errorMessage(node.getPosition(), String.format("Invalid escape engine requested '%s'. Only supporting [%s]", escapeModeName, request.getEnvironment().getEscapeEnvironment().getEscapeEngineSelector().availableEscapeEngines())));
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

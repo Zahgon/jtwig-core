@@ -1,18 +1,18 @@
 package org.jtwig.environment;
 
 public class EnvironmentHolder {
+
     private static ThreadLocal<Environment> instance = new InheritableThreadLocal<>();
 
-    public static Environment get () {
-        return instance.get();
+    public static Environment get() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static Environment set (Environment environment) {
-        instance.set(environment);
-        return environment;
+    public static Environment set(Environment environment) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static void remove () {
-        instance.remove();
+    public static void remove() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

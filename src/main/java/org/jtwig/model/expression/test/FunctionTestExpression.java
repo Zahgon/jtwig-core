@@ -3,6 +3,7 @@ package org.jtwig.model.expression.test;
 import org.jtwig.model.expression.InjectableExpression;
 
 public class FunctionTestExpression extends TestExpression {
+
     private final InjectableExpression injectableExpression;
 
     public FunctionTestExpression(InjectableExpression injectableExpression) {
@@ -10,6 +11,6 @@ public class FunctionTestExpression extends TestExpression {
     }
 
     public InjectableExpression getInjectableExpression() {
-        return injectableExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

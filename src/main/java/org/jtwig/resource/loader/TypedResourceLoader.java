@@ -1,7 +1,9 @@
 package org.jtwig.resource.loader;
 
 public class TypedResourceLoader {
+
     private final String type;
+
     private final ResourceLoader resourceLoader;
 
     public TypedResourceLoader(String type, ResourceLoader resourceLoader) {
@@ -10,10 +12,10 @@ public class TypedResourceLoader {
     }
 
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public ResourceLoader getResourceLoader() {
-        return resourceLoader;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

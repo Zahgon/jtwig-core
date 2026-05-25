@@ -5,24 +5,15 @@ import org.jtwig.resource.config.ResourceConfiguration;
 import org.jtwig.resource.loader.CompositeResourceLoader;
 import org.jtwig.resource.loader.ResourceLoader;
 import org.jtwig.resource.loader.TypedResourceLoader;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ResourceEnvironmentFactory {
-    public ResourceEnvironment create(ResourceConfiguration resourceConfiguration) {
-        List<TypedResourceLoader> resourceLoaders = resourceConfiguration.getResourceLoaders();
-        Map<String, ResourceLoader> resourceLoaderMap = resourceLoaderListToMap(resourceLoaders);
 
-        ResourceService resourceService = new ResourceService(
-                resourceLoaderMap,
-                resourceLoaders,
-                resourceConfiguration.getAbsoluteResourceTypes(),
-                resourceConfiguration.getRelativeResourceResolvers(),
-                resourceConfiguration.getResourceReferenceExtractor());
-        return new ResourceEnvironment(resourceConfiguration.getDefaultCharset(), resourceService, resourceConfiguration.getResourceReferenceExtractor());
+    public ResourceEnvironment create(ResourceConfiguration resourceConfiguration) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Map<String, ResourceLoader> resourceLoaderListToMap(List<TypedResourceLoader> resourceLoaders) {
@@ -31,10 +22,8 @@ public class ResourceEnvironmentFactory {
             if (!loaders.containsKey(resourceLoader.getType())) {
                 loaders.put(resourceLoader.getType(), new ArrayList<ResourceLoader>());
             }
-
             loaders.get(resourceLoader.getType()).add(resourceLoader.getResourceLoader());
         }
-
         Map<String, ResourceLoader> result = new HashMap<>();
         for (Map.Entry<String, List<ResourceLoader>> entry : loaders.entrySet()) {
             if (entry.getValue().size() <= 1) {
@@ -43,7 +32,6 @@ public class ResourceEnvironmentFactory {
                 result.put(entry.getKey(), new CompositeResourceLoader(entry.getValue()));
             }
         }
-
         return result;
     }
 }

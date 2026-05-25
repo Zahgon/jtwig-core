@@ -3,7 +3,9 @@ package org.jtwig.model.expression;
 import org.jtwig.model.position.Position;
 
 public class MapSelectionExpression extends Expression {
+
     private final Expression mapExpression;
+
     private final Expression selectValue;
 
     public MapSelectionExpression(Position position, Expression mapExpression, Expression selectValue) {
@@ -13,10 +15,10 @@ public class MapSelectionExpression extends Expression {
     }
 
     public Expression getMapExpression() {
-        return mapExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getSelectValue() {
-        return selectValue;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

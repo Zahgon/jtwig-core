@@ -5,7 +5,9 @@ import org.jtwig.functions.FunctionRequest;
 import org.jtwig.functions.JtwigFunction;
 
 public class FunctionValueSupplier implements Supplier<Object> {
+
     private final JtwigFunction jtwigFunction;
+
     private final FunctionRequest request;
 
     public FunctionValueSupplier(JtwigFunction jtwigFunction, FunctionRequest request) {
@@ -15,6 +17,6 @@ public class FunctionValueSupplier implements Supplier<Object> {
 
     @Override
     public Object get() {
-        return jtwigFunction.execute(request);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

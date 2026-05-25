@@ -7,15 +7,13 @@ import org.jtwig.parser.parboiled.model.Keyword;
 import org.parboiled.Rule;
 
 public class NullTestExpressionParser extends TestExpressionParser<NullTestExpression> {
+
     public NullTestExpressionParser(ParserContext context) {
         super(NullTestExpressionParser.class, context);
     }
 
     @Override
     public Rule Test() {
-        return Sequence(
-                parserContext().parser(LexicParser.class).Keyword(Keyword.NULL),
-                push(new NullTestExpression())
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

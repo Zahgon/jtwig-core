@@ -17,34 +17,9 @@ import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.convert.Converter;
 
 public class IncludeNodeRender implements NodeRender<IncludeNode> {
+
     @Override
     public Renderable render(RenderRequest renderRequest, IncludeNode node) {
-        Environment environment = renderRequest.getEnvironment();
-        CalculateExpressionService calculateExpressionService = environment.getRenderEnvironment().getCalculateExpressionService();
-        ResourceService resourceService = environment.getResourceEnvironment().getResourceService();
-
-        Object path = calculateExpressionService.calculate(renderRequest, node.getResourceExpression());
-        ResourceReference current = renderRequest.getRenderContext().getCurrent(ResourceReference.class);
-
-        ResourceReference newReference = resourceService.resolve(current, path, environment.getValueEnvironment());
-        ResourceMetadata resourceMetadata = resourceService.loadMetadata(newReference);
-
-        if (resourceMetadata.exists()) {
-            Converter<WrappedCollection> mapConverter = environment.getValueEnvironment().getCollectionConverter();
-            RenderResourceService renderResourceService = environment.getRenderEnvironment().getRenderResourceService();
-
-            Object mapValue = calculateExpressionService.calculate(renderRequest, node.getMapExpression());
-            WrappedCollection includeModel = mapConverter.convert(mapValue).or(WrappedCollection.empty());
-            return renderResourceService.render(renderRequest, new RenderResourceRequest(newReference,
-                    true, !node.isInheritModel(),
-                    includeModel
-            ));
-        } else {
-            if (node.isIgnoreMissing()) {
-                return EmptyRenderable.instance();
-            } else {
-                throw new ResourceNotFoundException(ErrorMessageFormatter.errorMessage(node.getPosition(), String.format("Resource '%s' (resolved to '%s') not found", path, newReference)));
-            }
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

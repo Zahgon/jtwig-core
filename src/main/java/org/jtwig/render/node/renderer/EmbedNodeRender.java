@@ -20,42 +20,9 @@ import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.convert.Converter;
 
 public class EmbedNodeRender implements NodeRender<EmbedNode> {
+
     @Override
     public Renderable render(RenderRequest renderRequest, EmbedNode node) {
-        Environment environment = renderRequest.getEnvironment();
-        CalculateExpressionService calculateExpressionService = environment.getRenderEnvironment().getCalculateExpressionService();
-        Object path = calculateExpressionService.calculate(renderRequest, node.getResourceExpression());
-        ResourceReference current = renderRequest.getRenderContext().getCurrent(ResourceReference.class);
-        ResourceService resourceService = environment.getResourceEnvironment().getResourceService();
-
-        ResourceReference newReference = resourceService.resolve(current, path, environment.getValueEnvironment());
-
-        ResourceMetadata resourceMetadata = resourceService.loadMetadata(newReference);
-
-        if (resourceMetadata.exists()) {
-            Converter<WrappedCollection> collectionConverter = environment.getValueEnvironment().getCollectionConverter();
-            RenderNodeService renderNodeService = environment.getRenderEnvironment().getRenderNodeService();
-            RenderResourceService renderResourceService = environment.getRenderEnvironment().getRenderResourceService();
-
-            Object mapValue = calculateExpressionService.calculate(renderRequest, node.getMapExpression());
-            WrappedCollection includeModel = collectionConverter.convert(mapValue).or(WrappedCollection.empty());
-
-            renderRequest.getRenderContext().start(BlockContext.class, BlockContext.newContext());
-            for (Node subNode : node.getNodes()) {
-                renderNodeService.render(renderRequest, subNode);
-            }
-
-            Renderable renderable = renderResourceService.render(renderRequest, new RenderResourceRequest(newReference, false, !node.isInheritModel(), includeModel));
-
-            renderRequest.getRenderContext().end(BlockContext.class);
-            return renderable;
-        } else {
-            if (node.isIgnoreMissing()) {
-                return EmptyRenderable.instance();
-            } else {
-                throw new ResourceNotFoundException(ErrorMessageFormatter.errorMessage(node.getPosition(), String.format("Resource '%s' not found", path)));
-            }
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-
 }

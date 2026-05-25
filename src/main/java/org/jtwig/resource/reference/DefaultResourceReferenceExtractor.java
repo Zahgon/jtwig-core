@@ -4,8 +4,11 @@ import org.jtwig.resource.reference.path.PathType;
 import org.jtwig.resource.reference.path.PathTypeSupplier;
 
 public class DefaultResourceReferenceExtractor implements ResourceReferenceExtractor {
+
     private final PathTypeSupplier pathTypeSupplier;
+
     private final PosixResourceReferenceExtractor posixResourceReferenceExtractor;
+
     private final UncResourceReferenceExtractor uncResourceReferenceExtractor;
 
     public DefaultResourceReferenceExtractor(PathTypeSupplier pathTypeSupplier, PosixResourceReferenceExtractor posixResourceReferenceExtractor, UncResourceReferenceExtractor uncResourceReferenceExtractor) {
@@ -16,10 +19,6 @@ public class DefaultResourceReferenceExtractor implements ResourceReferenceExtra
 
     @Override
     public ResourceReference extract(String spec) {
-        if (pathTypeSupplier.get() == PathType.UNC) {
-            return uncResourceReferenceExtractor.extract(spec);
-        } else {
-            return posixResourceReferenceExtractor.extract(spec);
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

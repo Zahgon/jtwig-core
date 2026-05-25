@@ -8,12 +8,11 @@ import org.jtwig.parser.parboiled.base.LexicParser;
 import org.jtwig.parser.parboiled.base.SpacingParser;
 import org.jtwig.parser.parboiled.model.Keyword;
 import org.parboiled.Rule;
-
 import java.util.List;
-
 import static org.parboiled.Parboiled.createParser;
 
 public class AnyTestExpressionParser extends TestExpressionParser<TestExpression> {
+
     private final List<Class<? extends TestExpressionParser>> testExpressionParsers;
 
     public AnyTestExpressionParser(ParserContext context, List<Class<? extends TestExpressionParser>> testExpressionParsers) {
@@ -24,46 +23,25 @@ public class AnyTestExpressionParser extends TestExpressionParser<TestExpression
 
     @Override
     public Rule Test() {
-        NotParser notParser = parserContext().parser(NotParser.class);
-        TestExpressionParser[] parsers = new TestExpressionParser[testExpressionParsers.size()];
-        for (int i = 0; i < parsers.length; i++) {
-            parsers[i] = parserContext().parser(testExpressionParsers.get(i));
-        }
-        return Sequence(
-                notParser.Rule(),
-                FirstOf(rulesFor(parsers, notParser))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Rule[] rulesFor(TestExpressionParser[] parsers, NotParser notParser) {
-        Rule[] rules = new Rule[parsers.length];
-        for (int i = 0; i < parsers.length; i++) {
-            rules[i] = ruleFor(parsers[i], notParser);
-        }
-        return rules;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     Rule ruleFor(TestExpressionParser parser, NotParser notParser) {
-        return Sequence(
-                parser.Test(),
-                push(NotTestExpression.create(notParser.pop(1), (TestExpression) parser.pop()))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class NotParser extends BasicParser<Boolean> {
+
         public NotParser(ParserContext context) {
             super(NotParser.class, context);
         }
 
-        public Rule Rule () {
-            return FirstOf(
-                    Sequence(
-                            parserContext().parser(LexicParser.class).Keyword(Keyword.NOT),
-                            parserContext().parser(SpacingParser.class).Spacing(),
-                            push(true)
-                    ),
-                    push(false)
-            );
+        public Rule Rule() {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

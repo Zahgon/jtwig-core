@@ -9,18 +9,14 @@ import org.jtwig.render.expression.test.calculator.TestExpressionCalculator;
 import org.jtwig.util.ErrorMessageFormatter;
 
 public class CalculateTestExpressionService {
+
     private final TestExpressionCalculatorSelector selector;
 
     public CalculateTestExpressionService(TestExpressionCalculatorSelector selector) {
         this.selector = selector;
     }
 
-    public Object calculate (RenderRequest request, Position position, TestExpression test, Expression argument) {
-        Optional<TestExpressionCalculator> optional = selector.calculatorFor(test);
-        if (optional.isPresent()) {
-            return optional.get().calculate(request, position, test, argument);
-        } else {
-            throw new IllegalArgumentException(ErrorMessageFormatter.errorMessage(position, String.format("Cannot find test calculator for '%s'", test.getClass())));
-        }
+    public Object calculate(RenderRequest request, Position position, TestExpression test, Expression argument) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

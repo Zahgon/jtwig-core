@@ -6,7 +6,9 @@ import org.jtwig.parser.cache.TemplateCache;
 import org.jtwig.resource.reference.ResourceReference;
 
 public class CachedJtwigParser implements JtwigParser {
+
     private final TemplateCache cache;
+
     private final JtwigParser jtwigParser;
 
     public CachedJtwigParser(TemplateCache cache, JtwigParser jtwigParser) {
@@ -16,6 +18,6 @@ public class CachedJtwigParser implements JtwigParser {
 
     @Override
     public Node parse(Environment environment, ResourceReference resource) {
-        return cache.get(jtwigParser, environment, resource);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

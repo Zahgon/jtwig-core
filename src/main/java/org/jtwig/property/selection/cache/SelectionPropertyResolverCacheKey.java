@@ -4,7 +4,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.jtwig.model.expression.Expression;
 
 public class SelectionPropertyResolverCacheKey {
+
     private final int leftValueClassHashcode;
+
     private final Expression expression;
 
     private SelectionPropertyResolverCacheKey(int leftValueClassHashcode, Expression expression) {
@@ -13,24 +15,24 @@ public class SelectionPropertyResolverCacheKey {
     }
 
     public static SelectionPropertyResolverCacheKey createFor(int leftValueClassHashcode, Expression expression) {
-        return new SelectionPropertyResolverCacheKey(leftValueClassHashcode, expression);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SelectionPropertyResolverCacheKey createFor(Class<?> leftValueClass, Expression expression) {
-        return SelectionPropertyResolverCacheKey.createFor(leftValueClass == null ? 0 : leftValueClass.hashCode(), expression);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static SelectionPropertyResolverCacheKey createFor(Object leftValue, Expression expression) {
-        return SelectionPropertyResolverCacheKey.createFor(leftValue == null ? null : leftValue.getClass(), expression);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return 89 * expression.hashCode() ^ 43 * leftValueClassHashcode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object obj) {
-        return EqualsBuilder.reflectionEquals(this, obj);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

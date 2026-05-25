@@ -12,19 +12,10 @@ import org.jtwig.renderable.StringBuilderRenderResult;
 import org.jtwig.renderable.impl.StringRenderable;
 
 public class FilterNodeRender implements NodeRender<FilterNode> {
+
     @Override
     public Renderable render(RenderRequest renderRequest, FilterNode node) {
-        RenderNodeService renderNodeService = renderRequest.getEnvironment().getRenderEnvironment().getRenderNodeService();
-        CalculateExpressionService calculateExpressionService = renderRequest.getEnvironment().getRenderEnvironment().getCalculateExpressionService();
-
-        InjectableExpression filterExpression = node.getFilterExpression();
-        Renderable renderable = renderNodeService.render(renderRequest, node.getContent());
-        String content = renderable.appendTo(new StringBuilderRenderResult()).content();
-        ConstantExpression expression = new ConstantExpression(filterExpression.getPosition(), content);
-        Expression injectedExpression = filterExpression.inject(expression);
-
-        Object calculate = calculateExpressionService.calculate(renderRequest, injectedExpression);
-        return new StringRenderable(getString(renderRequest, calculate));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getString(RenderRequest request, Object input) {

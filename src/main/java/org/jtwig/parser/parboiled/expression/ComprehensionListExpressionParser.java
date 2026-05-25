@@ -8,6 +8,7 @@ import org.parboiled.Rule;
 import org.parboiled.annotations.Label;
 
 public class ComprehensionListExpressionParser extends ExpressionParser<ComprehensionListExpression> {
+
     public ComprehensionListExpressionParser(ParserContext context) {
         super(ComprehensionListExpressionParser.class, context);
     }
@@ -15,21 +16,6 @@ public class ComprehensionListExpressionParser extends ExpressionParser<Comprehe
     @Override
     @Label("Comprehension List")
     public Rule ExpressionRule() {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        SpacingParser spacingParser = parserContext().parser(SpacingParser.class);
-        AnyExpressionParser parser = parserContext().parser(AnyExpressionParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                String("["),
-                spacingParser.Spacing(),
-                parser.ExpressionRule(),
-                spacingParser.Spacing(),
-                String(".."),
-                spacingParser.Spacing(),
-                parser.ExpressionRule(),
-                spacingParser.Spacing(),
-                Mandatory(String("]"), "Expecting end bracket"),
-                push(new ComprehensionListExpression(positionTrackerParser.pop(2), parser.pop(1), parser.pop()))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

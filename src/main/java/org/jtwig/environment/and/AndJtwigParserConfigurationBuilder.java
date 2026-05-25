@@ -5,6 +5,7 @@ import org.jtwig.parser.config.JtwigParserConfiguration;
 import org.jtwig.parser.config.JtwigParserConfigurationBuilder;
 
 public class AndJtwigParserConfigurationBuilder extends JtwigParserConfigurationBuilder<AndJtwigParserConfigurationBuilder> implements AndBuilder<EnvironmentConfigurationBuilder> {
+
     private final EnvironmentConfigurationBuilder environmentConfigurationBuilder;
 
     public AndJtwigParserConfigurationBuilder(EnvironmentConfigurationBuilder environmentConfigurationBuilder) {
@@ -18,7 +19,7 @@ public class AndJtwigParserConfigurationBuilder extends JtwigParserConfiguration
     }
 
     @Override
-    public EnvironmentConfigurationBuilder and () {
-        return environmentConfigurationBuilder;
+    public EnvironmentConfigurationBuilder and() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

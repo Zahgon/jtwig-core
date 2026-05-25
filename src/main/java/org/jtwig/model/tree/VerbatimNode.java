@@ -3,6 +3,7 @@ package org.jtwig.model.tree;
 import org.jtwig.model.position.Position;
 
 public class VerbatimNode extends Node {
+
     private final String content;
 
     public VerbatimNode(Position position, String content) {
@@ -11,6 +12,6 @@ public class VerbatimNode extends Node {
     }
 
     public String getContent() {
-        return content;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

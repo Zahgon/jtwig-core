@@ -6,10 +6,10 @@ import org.jtwig.parser.parboiled.ParserContext;
 import org.jtwig.parser.parboiled.base.BasicParser;
 import org.jtwig.parser.parboiled.base.PositionTrackerParser;
 import org.parboiled.Rule;
-
 import static org.parboiled.Parboiled.createParser;
 
 public class StringExpressionParser extends ExpressionParser<ConstantExpression> {
+
     public StringExpressionParser(ParserContext context) {
         super(StringExpressionParser.class, context);
         createParser(StringParser.class, context);
@@ -17,62 +17,33 @@ public class StringExpressionParser extends ExpressionParser<ConstantExpression>
 
     @Override
     public Rule ExpressionRule() {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        StringParser stringParser = parserContext().parser(StringParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                stringParser.StringRule(),
-                swap(),
-                push(new ConstantExpression(positionTrackerParser.pop(), stringParser.pop().toString()))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class StringParser extends BasicParser<StringBuilder> {
+
         public StringParser(ParserContext context) {
             super(StringParser.class, context);
         }
 
         public Rule StringRule() {
-            return Sequence(
-                    push(new StringBuilder()),
-                    FirstOf(
-                            StringWith('\''),
-                            StringWith('"')
-                    )
-            );
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         Rule StringWith(char start) {
-            return Sequence(
-                    String(start),
-                    ZeroOrMore(
-                            FirstOf(
-                                    Escape(),
-                                    Others(start)
-                            )
-                    ),
-                    String(start)
-            );
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         Rule Others(char start) {
-            return Sequence(
-                    Sequence(TestNot(AnyOf(new char[]{'\n', '\r', '\\', start})), ANY),
-                    run(peek().append(match()))
-            );
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         Rule Escape() {
-            return Sequence(Sequence(
-                            '\\',
-                            ANY
-                    ),
-                    run(peek().append(StringEscapeUtils.unescapeJava(match())))
-            );
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
-        boolean run (Object object) {
-            return true;
+        boolean run(Object object) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

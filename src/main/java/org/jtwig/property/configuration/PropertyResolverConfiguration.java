@@ -2,11 +2,12 @@ package org.jtwig.property.configuration;
 
 import org.jtwig.property.selection.cache.SelectionPropertyResolverCache;
 import org.jtwig.property.strategy.PropertyResolverStrategy;
-
 import java.util.List;
 
 public class PropertyResolverConfiguration {
+
     private final SelectionPropertyResolverCache cache;
+
     private final List<PropertyResolverStrategy> propertyResolverStrategies;
 
     public PropertyResolverConfiguration(SelectionPropertyResolverCache cache, List<PropertyResolverStrategy> propertyResolverStrategies) {
@@ -15,10 +16,10 @@ public class PropertyResolverConfiguration {
     }
 
     public SelectionPropertyResolverCache getCache() {
-        return cache;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public List<PropertyResolverStrategy> getPropertyResolverStrategies() {
-        return propertyResolverStrategies;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -16,13 +16,6 @@ public class DocumentParser extends NodeParser<Node> {
 
     @Override
     public Rule NodeRule() {
-        return Sequence(
-            FirstOf(
-                parserContext().parser(ExtendsNodeParser.class).NodeRule(),
-                parserContext().parser(CompositeNodeParser.class).NodeRule(),
-                push(new TextNode(parserContext().parser(PositionTrackerParser.class).currentPosition(), "", new TextNode.Configuration()))
-            ),
-            EOI
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -7,14 +7,9 @@ import org.jtwig.property.resolver.ValueContextPropertyResolver;
 import org.jtwig.value.context.ValueContext;
 
 public class ValueContextPropertyResolverStrategy implements PropertyResolverStrategy {
+
     @Override
     public Optional<PropertyResolver> select(Request request) {
-        if (request.getLeftValue() instanceof ValueContext) {
-            if (request.getRightExpression() instanceof VariableExpression) {
-                PropertyResolver propertyResolver = new ValueContextPropertyResolver();
-                return Optional.of(propertyResolver);
-            }
-        }
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

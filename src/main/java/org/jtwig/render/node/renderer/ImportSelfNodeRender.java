@@ -8,6 +8,7 @@ import org.jtwig.renderable.impl.EmptyRenderable;
 import org.jtwig.resource.reference.ResourceReference;
 
 public class ImportSelfNodeRender implements NodeRender<ImportSelfNode> {
+
     private final ImportRender importRender;
 
     public ImportSelfNodeRender(ImportRender importRender) {
@@ -16,11 +17,6 @@ public class ImportSelfNodeRender implements NodeRender<ImportSelfNode> {
 
     @Override
     public Renderable render(RenderRequest renderRequest, ImportSelfNode node) {
-        importRender.render(renderRequest,
-                renderRequest.getRenderContext().getCurrent(ResourceReference.class),
-                node.getAliasIdentifier().getIdentifier()
-        );
-
-        return EmptyRenderable.instance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

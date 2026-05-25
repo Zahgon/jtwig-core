@@ -5,16 +5,18 @@ import org.jtwig.property.resolver.request.PropertyResolveRequest;
 import org.jtwig.reflection.model.Value;
 
 public class EmptyPropertyResolver implements PropertyResolver {
+
     private static final EmptyPropertyResolver INSTANCE = new EmptyPropertyResolver();
 
-    public static EmptyPropertyResolver instance () {
-        return INSTANCE;
+    public static EmptyPropertyResolver instance() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    private EmptyPropertyResolver () {}
+    private EmptyPropertyResolver() {
+    }
 
     @Override
     public Optional<Value> resolve(PropertyResolveRequest request) {
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

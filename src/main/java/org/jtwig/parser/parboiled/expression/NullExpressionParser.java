@@ -8,17 +8,13 @@ import org.jtwig.parser.parboiled.model.Keyword;
 import org.parboiled.Rule;
 
 public class NullExpressionParser extends ExpressionParser<ConstantExpression> {
+
     public NullExpressionParser(ParserContext context) {
         super(NullExpressionParser.class, context);
     }
 
     @Override
     public Rule ExpressionRule() {
-        PositionTrackerParser positionTrackerParser = parserContext().parser(PositionTrackerParser.class);
-        return Sequence(
-                positionTrackerParser.PushPosition(),
-                parserContext().parser(LexicParser.class).Keyword(Keyword.NULL),
-                push(new ConstantExpression(positionTrackerParser.pop(), null))
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

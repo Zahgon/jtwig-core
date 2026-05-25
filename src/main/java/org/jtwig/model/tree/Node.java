@@ -5,6 +5,7 @@ import org.jtwig.model.position.Traceable;
 import org.jtwig.model.tree.visitor.NodeVisitor;
 
 public abstract class Node implements Traceable {
+
     private final Position position;
 
     protected Node(Position position) {
@@ -13,10 +14,10 @@ public abstract class Node implements Traceable {
 
     @Override
     public Position getPosition() {
-        return position;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public void visit (NodeVisitor nodeConsumer) {
-        nodeConsumer.consume(this);
+    public void visit(NodeVisitor nodeConsumer) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

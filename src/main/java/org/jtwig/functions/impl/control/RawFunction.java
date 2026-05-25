@@ -8,20 +8,18 @@ import org.jtwig.render.context.RenderContext;
 import org.jtwig.render.context.RenderContextHolder;
 
 public class RawFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "raw";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.maximumNumberOfArguments(1).minimumNumberOfArguments(1);
-        Object value = request.get(0);
-        getRenderContext().set(EscapeEngine.class, NoneEscapeEngine.instance());
-        return value;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected RenderContext getRenderContext() {
-        return RenderContextHolder.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

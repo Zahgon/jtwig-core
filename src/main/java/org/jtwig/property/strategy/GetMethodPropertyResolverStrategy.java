@@ -10,6 +10,7 @@ import org.jtwig.reflection.model.java.JavaMethod;
 import org.jtwig.reflection.model.java.JavaMethods;
 
 public class GetMethodPropertyResolverStrategy implements PropertyResolverStrategy {
+
     private final JavaClassManager classManager;
 
     public GetMethodPropertyResolverStrategy(JavaClassManager classManager) {
@@ -18,17 +19,6 @@ public class GetMethodPropertyResolverStrategy implements PropertyResolverStrate
 
     @Override
     public Optional<PropertyResolver> select(Request request) {
-        if (request.getRightExpression() instanceof VariableExpression) {
-            String identifier = ((VariableExpression) request.getRightExpression()).getIdentifier();
-            JavaClass javaClass = classManager.metadata(request.getLeftValue().getClass());
-            JavaMethods method = javaClass.method("get");
-            Optional<JavaMethod> methodMethod = method.getMethod(String.class);
-
-            if (methodMethod.isPresent()) {
-                PropertyResolver callMethodPropertyResolver = new CallMethodPropertyResolver(methodMethod.get(), identifier);
-                return Optional.of(callMethodPropertyResolver);
-            }
-        }
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

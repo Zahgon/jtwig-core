@@ -5,37 +5,19 @@ import org.jtwig.functions.SimpleJtwigFunction;
 import org.jtwig.value.Undefined;
 import org.jtwig.value.WrappedCollection;
 import org.jtwig.value.convert.Converter;
-
 import java.util.Iterator;
 import java.util.Map;
 
 public class LastFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "last";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1).maximumNumberOfArguments(1);
-
-        Object input = request.get(0);
-        if (input == null) {
-            throw request.exception("Cannot get last element from a collection: input is null.");
-        }
-        Converter.Result<WrappedCollection> collectionResult = request.getEnvironment()
-                .getValueEnvironment().getCollectionConverter()
-                .convert(input);
-        if (collectionResult.isDefined()) {
-            Iterator<Map.Entry<String, Object>> iterator = collectionResult.get().iterator();
-            if (iterator.hasNext()) return last(iterator);
-            else return Undefined.UNDEFINED;
-        } else if (input instanceof String) {
-            String argument = (String) input;
-            return argument.length() > 0 ? argument.charAt(argument.length() - 1) : Undefined.UNDEFINED;
-        }
-
-        return input;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private Object last(Iterator<Map.Entry<String, Object>> iterator) {

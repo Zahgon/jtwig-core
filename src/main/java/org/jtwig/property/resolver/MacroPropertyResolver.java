@@ -8,7 +8,9 @@ import org.jtwig.property.resolver.request.PropertyResolveRequest;
 import org.jtwig.reflection.model.Value;
 
 public class MacroPropertyResolver implements PropertyResolver {
+
     private final MacroRender macroRender;
+
     private final ImportedMacros macro;
 
     public MacroPropertyResolver(MacroRender macroRender, ImportedMacros macro) {
@@ -18,9 +20,6 @@ public class MacroPropertyResolver implements PropertyResolver {
 
     @Override
     public Optional<Value> resolve(PropertyResolveRequest request) {
-        Optional<Macro> resolve = macro.resolve(request.getPropertyName().get());
-        if (!resolve.isPresent()) return Optional.absent();
-
-        return Optional.of(new Value(macroRender.render(request, request.getArguments(), resolve.get())));
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

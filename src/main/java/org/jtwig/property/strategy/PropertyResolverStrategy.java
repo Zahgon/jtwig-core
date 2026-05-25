@@ -6,10 +6,13 @@ import org.jtwig.property.resolver.PropertyResolver;
 import org.jtwig.render.RenderRequest;
 
 public interface PropertyResolverStrategy {
-    Optional<PropertyResolver> select (Request request);
+
+    Optional<PropertyResolver> select(Request request);
 
     class Request extends RenderRequest {
+
         private final Object leftValue;
+
         private final Expression rightExpression;
 
         public Request(RenderRequest request, Object leftValue, Expression rightExpression) {
@@ -19,11 +22,11 @@ public interface PropertyResolverStrategy {
         }
 
         public Object getLeftValue() {
-            return leftValue;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Expression getRightExpression() {
-            return rightExpression;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

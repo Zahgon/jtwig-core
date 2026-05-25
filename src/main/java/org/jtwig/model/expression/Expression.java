@@ -4,6 +4,7 @@ import org.jtwig.model.position.Position;
 import org.jtwig.model.position.Traceable;
 
 public abstract class Expression implements Traceable {
+
     private final Position position;
 
     protected Expression(Position position) {
@@ -12,6 +13,6 @@ public abstract class Expression implements Traceable {
 
     @Override
     public Position getPosition() {
-        return position;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

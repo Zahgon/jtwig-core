@@ -1,7 +1,9 @@
 package org.jtwig.render.listeners;
 
 public class StagedRenderListener {
+
     private final RenderStage stage;
+
     private final RenderListener listener;
 
     public StagedRenderListener(RenderStage stage, RenderListener listener) {
@@ -10,10 +12,10 @@ public class StagedRenderListener {
     }
 
     public RenderStage getStage() {
-        return stage;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RenderListener getListener() {
-        return listener;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

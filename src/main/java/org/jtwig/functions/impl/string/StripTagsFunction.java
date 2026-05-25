@@ -5,27 +5,18 @@ import org.jtwig.functions.SimpleJtwigFunction;
 import org.jtwig.util.HtmlUtils;
 
 public class StripTagsFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "striptags";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1).maximumNumberOfArguments(2);
-
-        String allowedTags = "";
-        if (request.getNumberOfArguments() == 2) {
-            allowedTags = getString(request, 1);
-        }
-
-        String input = getString(request, 0);
-
-        return HtmlUtils.stripTags(input, allowedTags);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private String getString(FunctionRequest request, int index) {
-        return request.getEnvironment().getValueEnvironment().getStringConverter()
-                .convert(request.get(index));
+        return request.getEnvironment().getValueEnvironment().getStringConverter().convert(request.get(index));
     }
 }

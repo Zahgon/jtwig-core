@@ -6,7 +6,9 @@ import org.jtwig.renderable.RenderResult;
 import org.jtwig.renderable.Renderable;
 
 public class StringRenderable implements Renderable {
+
     private final String content;
+
     private final EscapeEngine escapeEngine;
 
     public StringRenderable(String content) {
@@ -20,7 +22,6 @@ public class StringRenderable implements Renderable {
 
     @Override
     public RenderResult appendTo(RenderResult result) {
-        result.append(escapeEngine.escape(content));
-        return result;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

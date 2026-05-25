@@ -5,17 +5,14 @@ import org.jtwig.functions.FunctionRequest;
 import org.jtwig.functions.SimpleJtwigFunction;
 
 public class TitleFunction extends SimpleJtwigFunction {
+
     @Override
     public String name() {
-        return "title";
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Object execute(FunctionRequest request) {
-        request.minimumNumberOfArguments(1).maximumNumberOfArguments(1);
-        String input = request.getEnvironment().getValueEnvironment()
-                .getStringConverter()
-                .convert(request.get(0));
-        return WordUtils.capitalize(input);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

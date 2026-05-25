@@ -3,12 +3,12 @@ package org.jtwig.render.context.model;
 import com.google.common.base.Optional;
 import org.jtwig.model.tree.BlockNode;
 import org.jtwig.resource.reference.ResourceReference;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
 public class BlockContext {
+
     private final Map<String, LinkedList<BlockDefinition>> blocks;
 
     public BlockContext(Map<String, LinkedList<BlockDefinition>> blocks) {
@@ -16,57 +16,35 @@ public class BlockContext {
     }
 
     public static BlockContext newContext() {
-        return new BlockContext(new HashMap<String, java.util.LinkedList<BlockDefinition>>());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<BlockDefinition> get(String identifier) {
-        return get(identifier, 0);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<BlockDefinition> get(String identifier, int index) {
-        LinkedList<BlockDefinition> stack = blocks.get(identifier);
-        if (stack == null) {
-            return Optional.absent();
-        }
-
-        try {
-            return Optional.of(stack.get(index));
-        } catch (IndexOutOfBoundsException e) {
-            return Optional.absent();
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Optional<BlockDefinition> pollFirst(String identifier) {
-        LinkedList<BlockDefinition> stack = blocks.get(identifier);
-        if (stack == null) {
-            return Optional.absent();
-        }
-
-        return Optional.fromNullable(stack.pollFirst());
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addLast(BlockNode node, ResourceReference source) {
-        BlockDefinition blockDefinition = new BlockDefinition(node.getContent(), source);
-        String identifier = node.getIdentifier();
-
-        addLast(identifier, blockDefinition);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addLast(String identifier, BlockDefinition blockDefinition) {
-        LinkedList<BlockDefinition> blockDefinitions = getOrAddStack(identifier);
-        blockDefinitions.addLast(blockDefinition);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addFirst(BlockNode node, ResourceReference source) {
-        BlockDefinition blockDefinition = new BlockDefinition(node.getContent(), source);
-        String identifier = node.getIdentifier();
-
-        addFirst(identifier, blockDefinition);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void addFirst(String identifier, BlockDefinition blockDefinition) {
-        LinkedList<BlockDefinition> blockDefinitions = getOrAddStack(identifier);
-        blockDefinitions.addFirst(blockDefinition);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private LinkedList<BlockDefinition> getOrAddStack(String identifier) {

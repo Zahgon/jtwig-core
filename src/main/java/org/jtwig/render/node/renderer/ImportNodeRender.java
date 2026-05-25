@@ -14,6 +14,7 @@ import org.jtwig.resource.reference.ResourceReference;
 import org.jtwig.util.ErrorMessageFormatter;
 
 public class ImportNodeRender implements NodeRender<ImportNode> {
+
     private final ImportRender importRender;
 
     public ImportNodeRender(ImportRender importRender) {
@@ -22,24 +23,6 @@ public class ImportNodeRender implements NodeRender<ImportNode> {
 
     @Override
     public Renderable render(RenderRequest renderRequest, ImportNode node) {
-        Environment environment = renderRequest.getEnvironment();
-        CalculateExpressionService calculateExpressionService = environment.getRenderEnvironment().getCalculateExpressionService();
-        ResourceService resourceService = environment.getResourceEnvironment().getResourceService();
-
-        String macroIdentifier = node.getAliasIdentifier().getIdentifier();
-
-        Object objectPath = calculateExpressionService.calculate(renderRequest, node.getImportExpression());
-        String path = environment.getValueEnvironment().getStringConverter().convert(objectPath);
-        ResourceReference current = renderRequest.getRenderContext().getCurrent(ResourceReference.class);
-        ResourceReference newReference = resourceService.resolve(current, path);
-        ResourceMetadata resourceMetadata = resourceService.loadMetadata(newReference);
-
-        if (resourceMetadata.exists()) {
-            importRender.render(renderRequest, newReference, macroIdentifier);
-        } else {
-            throw new ResourceNotFoundException(ErrorMessageFormatter.errorMessage(node.getPosition(), String.format("Resource '%s' not found", path)));
-        }
-
-        return EmptyRenderable.instance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

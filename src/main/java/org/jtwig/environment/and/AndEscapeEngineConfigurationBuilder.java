@@ -5,6 +5,7 @@ import org.jtwig.escape.config.EscapeEngineConfiguration;
 import org.jtwig.escape.config.EscapeEngineConfigurationBuilder;
 
 public class AndEscapeEngineConfigurationBuilder extends EscapeEngineConfigurationBuilder<AndEscapeEngineConfigurationBuilder> implements AndBuilder<EnvironmentConfigurationBuilder> {
+
     private final EnvironmentConfigurationBuilder parent;
 
     public AndEscapeEngineConfigurationBuilder(EscapeEngineConfiguration prototype, EnvironmentConfigurationBuilder parent) {
@@ -18,6 +19,6 @@ public class AndEscapeEngineConfigurationBuilder extends EscapeEngineConfigurati
 
     @Override
     public EnvironmentConfigurationBuilder and() {
-        return parent;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

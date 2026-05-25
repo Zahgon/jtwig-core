@@ -3,7 +3,9 @@ package org.jtwig.model.tree;
 import org.jtwig.model.position.Position;
 
 public class TextNode extends Node {
+
     private final String text;
+
     private final Configuration configuration;
 
     public TextNode(Position position, String text, Configuration configuration) {
@@ -13,38 +15,37 @@ public class TextNode extends Node {
     }
 
     public String getText() {
-        return text;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public TextNode trimRight(boolean trimRight) {
-        this.configuration.setTrimRight(trimRight);
-        return this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Configuration getConfiguration() {
-        return configuration;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Configuration {
+
         private boolean trimLeft;
+
         private boolean trimRight;
 
         public boolean isTrimLeft() {
-            return trimLeft;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Configuration setTrimLeft(boolean trimLeft) {
-            this.trimLeft = trimLeft;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public boolean isTrimRight() {
-            return trimRight;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public Configuration setTrimRight(boolean trimRight) {
-            this.trimRight = trimRight;
-            return this;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

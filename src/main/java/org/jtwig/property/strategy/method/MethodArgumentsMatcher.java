@@ -1,10 +1,10 @@
 package org.jtwig.property.strategy.method;
 
 import org.jtwig.reflection.model.java.JavaMethod;
-
 import java.util.List;
 
 public class MethodArgumentsMatcher {
+
     private final ArgumentsConverter argumentsConverter;
 
     public MethodArgumentsMatcher(ArgumentsConverter argumentsConverter) {
@@ -12,6 +12,6 @@ public class MethodArgumentsMatcher {
     }
 
     public boolean matches(JavaMethod method, List<Object> arguments) {
-        return argumentsConverter.convert(method, arguments.toArray()).isPresent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

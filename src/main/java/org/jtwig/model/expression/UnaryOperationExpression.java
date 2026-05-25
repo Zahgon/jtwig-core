@@ -4,7 +4,9 @@ import org.jtwig.model.position.Position;
 import org.jtwig.render.expression.calculator.operation.unary.UnaryOperator;
 
 public class UnaryOperationExpression extends Expression {
+
     private final UnaryOperator calculator;
+
     private final Expression operand;
 
     public UnaryOperationExpression(Position position, UnaryOperator calculator, Expression operand) {
@@ -14,10 +16,10 @@ public class UnaryOperationExpression extends Expression {
     }
 
     public UnaryOperator getOperator() {
-        return calculator;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getOperand() {
-        return operand;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

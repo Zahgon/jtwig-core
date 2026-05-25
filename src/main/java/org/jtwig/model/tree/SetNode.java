@@ -5,7 +5,9 @@ import org.jtwig.model.expression.VariableExpression;
 import org.jtwig.model.position.Position;
 
 public class SetNode extends Node {
+
     private final VariableExpression variableExpression;
+
     private final Expression expression;
 
     public SetNode(Position position, VariableExpression variableExpression, Expression expression) {
@@ -15,10 +17,10 @@ public class SetNode extends Node {
     }
 
     public VariableExpression getVariableExpression() {
-        return variableExpression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Expression getExpression() {
-        return expression;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

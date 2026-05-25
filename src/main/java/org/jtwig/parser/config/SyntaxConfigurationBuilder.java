@@ -3,15 +3,23 @@ package org.jtwig.parser.config;
 import org.apache.commons.lang3.builder.Builder;
 
 public class SyntaxConfigurationBuilder<B extends SyntaxConfigurationBuilder> implements Builder<SyntaxConfiguration> {
+
     private String startComment;
+
     private String endComment;
+
     private String startOutput;
+
     private String endOutput;
+
     private String startCode;
+
     private String endCode;
 
-    public SyntaxConfigurationBuilder () {}
-    public SyntaxConfigurationBuilder (SyntaxConfiguration prototype) {
+    public SyntaxConfigurationBuilder() {
+    }
+
+    public SyntaxConfigurationBuilder(SyntaxConfiguration prototype) {
         this.startComment = prototype.getStartComment();
         this.endComment = prototype.getEndComment();
         this.startOutput = prototype.getStartOutput();
@@ -20,50 +28,36 @@ public class SyntaxConfigurationBuilder<B extends SyntaxConfigurationBuilder> im
         this.endCode = prototype.getEndCode();
     }
 
-
     public B withStartComment(String startComment) {
-        this.startComment = startComment;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withEndComment(String endComment) {
-        this.endComment = endComment;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withStartOutput(String startOutput) {
-        this.startOutput = startOutput;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withEndOutput(String endOutput) {
-        this.endOutput = endOutput;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withStartCode(String startCode) {
-        this.startCode = startCode;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public B withEndCode(String endCode) {
-        this.endCode = endCode;
-        return self();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     protected B self() {
-        return (B) this;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public SyntaxConfiguration build() {
-        return new SyntaxConfiguration(
-                startComment,
-                endComment,
-                startOutput,
-                endOutput,
-                startCode,
-                endCode
-        );
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

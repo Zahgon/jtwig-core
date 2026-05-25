@@ -1,6 +1,7 @@
 package org.jtwig.parser.parboiled.model;
 
 public class LimitProperties {
+
     private final boolean whiteSpaceControl;
 
     public LimitProperties(boolean whiteSpaceControl) {
@@ -8,6 +9,6 @@ public class LimitProperties {
     }
 
     public boolean isWhiteSpaceControl() {
-        return whiteSpaceControl;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

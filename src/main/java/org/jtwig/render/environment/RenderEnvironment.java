@@ -7,18 +7,26 @@ import org.jtwig.render.expression.calculator.operation.unary.UnaryOperationServ
 import org.jtwig.render.expression.test.CalculateTestExpressionService;
 import org.jtwig.render.listeners.RenderListenerRegistry;
 import org.jtwig.render.node.RenderNodeService;
-
 import java.nio.charset.Charset;
 
 public class RenderEnvironment {
+
     private final boolean strictMode;
+
     private final Charset defaultOutputCharset;
+
     private final RenderResourceService renderResourceService;
+
     private final RenderNodeService renderNodeService;
+
     private final CalculateExpressionService calculateExpressionService;
+
     private final BinaryOperationService binaryOperationService;
+
     private final UnaryOperationService unaryOperationService;
+
     private final CalculateTestExpressionService calculateTestExpressionService;
+
     private final RenderListenerRegistry renderListeners;
 
     public RenderEnvironment(boolean strictMode, Charset defaultOutputCharset, RenderResourceService renderResourceService, RenderNodeService renderNodeService, CalculateExpressionService calculateExpressionService, BinaryOperationService binaryOperationService, UnaryOperationService unaryOperationService, CalculateTestExpressionService calculateTestExpressionService, RenderListenerRegistry renderListeners) {
@@ -34,38 +42,38 @@ public class RenderEnvironment {
     }
 
     public boolean getStrictMode() {
-        return strictMode;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Charset getDefaultOutputCharset() {
-        return defaultOutputCharset;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RenderResourceService getRenderResourceService() {
-        return renderResourceService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RenderNodeService getRenderNodeService() {
-        return renderNodeService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CalculateExpressionService getCalculateExpressionService() {
-        return calculateExpressionService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public BinaryOperationService getBinaryOperationService() {
-        return binaryOperationService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public UnaryOperationService getUnaryOperationService() {
-        return unaryOperationService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public CalculateTestExpressionService getCalculateTestExpressionService() {
-        return calculateTestExpressionService;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public RenderListenerRegistry getRenderListeners() {
-        return renderListeners;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

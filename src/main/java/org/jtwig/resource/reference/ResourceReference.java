@@ -2,37 +2,42 @@ package org.jtwig.resource.reference;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 import java.io.File;
 
 public class ResourceReference {
+
     public static final String ANY_TYPE = "any";
+
     public static final String STRING = "string";
+
     public static final String FILE = "file";
+
     public static final String MEMORY = "memory";
+
     public static final String CLASSPATH = "classpath";
 
-    public static ResourceReference inline (String template) {
-        return new ResourceReference(STRING, template);
+    public static ResourceReference inline(String template) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static ResourceReference memory (String name) {
-        return new ResourceReference(MEMORY, name);
+    public static ResourceReference memory(String name) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static ResourceReference file (String path) {
-        return new ResourceReference(FILE, path);
+    public static ResourceReference file(String path) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static ResourceReference file (File path) {
-        return new ResourceReference(FILE, path.getAbsolutePath());
+    public static ResourceReference file(File path) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static ResourceReference classpath (String path) {
-        return new ResourceReference(CLASSPATH, path);
+    public static ResourceReference classpath(String path) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final String type;
+
     private final String path;
 
     public ResourceReference(String type, String path) {
@@ -41,38 +46,25 @@ public class ResourceReference {
     }
 
     public String getType() {
-        return type;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public String getPath() {
-        return path;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ResourceReference that = (ResourceReference) o;
-
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(path, that.path)
-                .isEquals();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-                .append(type)
-                .append(path)
-                .toHashCode();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public String toString() {
-        if (ANY_TYPE.equals(type)) return path;
-        else return String.format("%s:%s", type, path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

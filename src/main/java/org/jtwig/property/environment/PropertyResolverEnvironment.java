@@ -3,6 +3,7 @@ package org.jtwig.property.environment;
 import org.jtwig.property.selection.SelectionPropertyResolver;
 
 public class PropertyResolverEnvironment {
+
     private final SelectionPropertyResolver selectionPropertyResolver;
 
     public PropertyResolverEnvironment(SelectionPropertyResolver selectionPropertyResolver) {
@@ -10,6 +11,6 @@ public class PropertyResolverEnvironment {
     }
 
     public SelectionPropertyResolver getSelectionPropertyResolver() {
-        return selectionPropertyResolver;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

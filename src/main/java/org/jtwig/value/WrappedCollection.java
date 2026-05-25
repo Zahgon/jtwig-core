@@ -6,14 +6,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WrappedCollection implements Iterable<Map.Entry<String, Object>> {
+
     public static WrappedCollection empty() {
-        return new WrappedCollection();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public static WrappedCollection singleton (Object value) {
-        WrappedCollection collection = new WrappedCollection();
-        collection.add("0", value);
-        return collection;
+    public static WrappedCollection singleton(Object value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final LinkedHashMap<String, Object> store;
@@ -22,33 +21,28 @@ public class WrappedCollection implements Iterable<Map.Entry<String, Object>> {
         this.store = new LinkedHashMap<>();
     }
 
-    public WrappedCollection add (String key, Object value) {
-        store.put(key, value);
-        return this;
+    public WrappedCollection add(String key, Object value) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Iterator<Map.Entry<String, Object>> iterator() {
-        return store.entrySet().iterator();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public int size() {
-        return store.size();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<String> keys() {
-        return store.keySet();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Object getValue(String key) {
-        if (store.containsKey(key)) {
-            return store.get(key);
-        } else {
-            return Undefined.UNDEFINED;
-        }
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public Collection<Object> values() {
-        return store.values();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

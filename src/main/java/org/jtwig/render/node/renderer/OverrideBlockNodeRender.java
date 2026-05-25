@@ -8,10 +8,9 @@ import org.jtwig.renderable.impl.EmptyRenderable;
 import org.jtwig.resource.reference.ResourceReference;
 
 public class OverrideBlockNodeRender implements NodeRender<OverrideBlockNode> {
+
     @Override
     public Renderable render(RenderRequest renderRequest, OverrideBlockNode node) {
-        ResourceReference current = renderRequest.getRenderContext().getCurrent(ResourceReference.class);
-        renderRequest.getRenderContext().getCurrent(BlockContext.class).addLast(node, current);
-        return EmptyRenderable.instance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

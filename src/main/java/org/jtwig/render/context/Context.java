@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Context<T> {
-    public static <T> Context<T> create (T item) {
-        return new Context<>(item, new ArrayList<Runnable>());
+
+    public static <T> Context<T> create(T item) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final AtomicReference<T> item;
+
     private final List<Runnable> endTasks;
 
     private Context(T item, List<Runnable> endTasks) {
@@ -18,20 +20,18 @@ public class Context<T> {
     }
 
     public T getItem() {
-        return item.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public void onEnd (Runnable run) {
-        endTasks.add(run);
+    public void onEnd(Runnable run) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
-    public void end () {
-        for (Runnable task : endTasks) {
-            task.run();
-        }
+    public void end() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public void set(T item) {
-        this.item.set(item);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

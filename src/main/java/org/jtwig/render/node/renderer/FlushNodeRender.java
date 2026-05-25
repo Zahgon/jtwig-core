@@ -6,8 +6,9 @@ import org.jtwig.renderable.Renderable;
 import org.jtwig.renderable.impl.FlushRenderable;
 
 public class FlushNodeRender implements NodeRender<FlushNode> {
+
     @Override
     public Renderable render(RenderRequest renderRequest, FlushNode node) {
-        return FlushRenderable.instance();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

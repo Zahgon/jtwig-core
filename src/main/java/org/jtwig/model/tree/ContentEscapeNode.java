@@ -4,6 +4,7 @@ import com.google.common.base.Optional;
 import org.jtwig.model.position.Position;
 
 public class ContentEscapeNode extends ContentNode {
+
     private final Optional<String> escapeEngineName;
 
     public ContentEscapeNode(Position position, Node content, Optional<String> escapeEngineName) {
@@ -12,6 +13,6 @@ public class ContentEscapeNode extends ContentNode {
     }
 
     public Optional<String> getEscapeEngineName() {
-        return escapeEngineName;
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

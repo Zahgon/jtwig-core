@@ -3,7 +3,6 @@ package org.jtwig.resource.loader;
 import com.google.common.base.Optional;
 import com.google.common.base.Supplier;
 import org.jtwig.resource.exceptions.ResourceNotFoundException;
-
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URL;
@@ -12,8 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class InMemoryResourceLoader implements ResourceLoader {
-    public static InMemoryResourceLoader.Builder builder () {
-        return new InMemoryResourceLoader.Builder();
+
+    public static InMemoryResourceLoader.Builder builder() {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     private final Map<String, Supplier<InputStream>> inputStreamMap;
@@ -24,41 +24,40 @@ public class InMemoryResourceLoader implements ResourceLoader {
 
     @Override
     public Optional<Charset> getCharset(String path) {
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public InputStream load(String path) {
-        Supplier<InputStream> streamSupplier = inputStreamMap.get(path);
-        if (streamSupplier == null) throw new ResourceNotFoundException(String.format("Resource '%s' not found", path));
-        return streamSupplier.get();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public boolean exists(String path) {
-        return inputStreamMap.containsKey(path);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     @Override
     public Optional<URL> toUrl(String path) {
-        return Optional.absent();
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     public static class Builder implements org.apache.commons.lang3.builder.Builder<InMemoryResourceLoader> {
+
         private final Map<String, Supplier<InputStream>> supplierMap = new HashMap<>();
 
-        public Builder withResource (String key, String content) {
-            supplierMap.put(key, new StringInputStreamSupplier(content));
-            return this;
+        public Builder withResource(String key, String content) {
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         @Override
         public InMemoryResourceLoader build() {
-            return new InMemoryResourceLoader(supplierMap);
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
     public static class StringInputStreamSupplier implements Supplier<InputStream> {
+
         private final String content;
 
         public StringInputStreamSupplier(String content) {
@@ -67,7 +66,7 @@ public class InMemoryResourceLoader implements ResourceLoader {
 
         @Override
         public InputStream get() {
-            return new ByteArrayInputStream(content.getBytes());
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 }

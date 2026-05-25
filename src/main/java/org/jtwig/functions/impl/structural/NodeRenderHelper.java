@@ -8,13 +8,8 @@ import org.jtwig.renderable.StringBuilderRenderResult;
 import org.jtwig.resource.reference.ResourceReference;
 
 class NodeRenderHelper {
-    static Object renderBlock(FunctionRequest renderRequest, BlockDefinition blockDefinition) {
-        RenderNodeService renderNodeService = renderRequest.getEnvironment().getRenderEnvironment().getRenderNodeService();
-        renderRequest.getRenderContext().start(ResourceReference.class, blockDefinition.getSource());
-        RenderResult result = renderNodeService.render(renderRequest, blockDefinition.getNode())
-                .appendTo(new StringBuilderRenderResult());
 
-        renderRequest.getRenderContext().end(ResourceReference.class);
-        return result.content();
+    static Object renderBlock(FunctionRequest renderRequest, BlockDefinition blockDefinition) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }
